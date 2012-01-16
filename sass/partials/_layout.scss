@@ -11,24 +11,33 @@ body {
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   text-align: center;
   margin: 0;
+background-color: #444;
 }
 
 #container {
-  width: 720px;
+  width: 900px;
   height: 100%;
   min-height: 100%;
   height: auto !important;
-
   color: $black;
-
   margin: 0px auto;
   padding: 0;
   text-align: left;
+background-color: #fff;
+border-right: 1px solid #eee;
+border-left: 1px solid #eee;
 }
 
 header {
-  padding: 20px 0 0 0;
-  text-align: center;
+height: 250px;
+background-image: url(/images/hundetraining_teamarbeit_bg_header.jpg);
+}
+
+.logo {
+    left: 25px;
+    outline: medium none;
+    position: relative;
+    top: 105px;
 }
 
 nav {

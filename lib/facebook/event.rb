@@ -5,6 +5,10 @@ class Facebook::Event < Facebook::GraphObject
   def description
     data["description"]
   end
+  
+  def summary
+    description[0..200] + "..."
+  end
 
   def address
     data["venue"].merge("location" => location)
@@ -12,6 +16,10 @@ class Facebook::Event < Facebook::GraphObject
 
   def location
     data["location"]
+  end
+  
+  def path
+    "termine/#{id}/#{name.parameterize}"
   end
 
   def start

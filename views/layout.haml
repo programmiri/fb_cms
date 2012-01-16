@@ -34,18 +34,22 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();    
-  %body{ :class => "" }
+  %body
+    -# auch ein kommentar
     #container
-      %nav
-        %ul
-          %li
-            %a{:href => url("/") } News
-          %li
-            %a{:href => url("/about") } About
-          %li
-            %a{:href => url("/albums") } Pictures
-          %li
-            %a{:href => url("/events") } Events
+      %header
+        %a.logo{:href => url("/"), :title => "Hundetraining Teamarbeit"}
+          %img{:src => url("/images/logo_hundetraining_teamarbeit.png")}
+        %nav
+          %ul
+            %li
+              %a{:href => url("/") } Start
+            %li
+              %a{:href => url("/ueberuns") } Über uns
+            %li
+              %a{:href => url("/bilder") } Bilder
+            %li
+              %a{:href => url("/termine") } Termine
 
       #content{ :role => "main" }
         = yield

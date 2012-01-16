@@ -5,6 +5,10 @@ class Facebook::Album < Facebook::GraphObject
   def description
     data["description"] || name
   end
+  
+  def path
+    "bilder/#{id}/#{name.parameterize}"
+  end
 
   def type
     data["type"]

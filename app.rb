@@ -31,32 +31,33 @@ configure :production do
   set :cache_ttl, 30 * 60
 end
 
+# Ein Kommentar
 get '/' do
   posts = Facebook::Post.all
   haml :index, :locals => { :posts => posts }
 end
 
-get '/about' do
+get '/ueberuns' do
   page = Facebook::Page.load
   haml :about, :locals => { :page => page }
 end
 
-get '/albums' do
+get '/bilder' do
   albums = Facebook::Album.all
   haml :albums, :locals => { :albums => albums }
 end
 
-get '/albums/:id/:name' do
+get '/bilder/:id/:name' do
   album = Facebook::Album.find(params[:id])
   haml :album, :locals => { :album => album }
 end
 
-get '/events' do
+get '/termine' do
   events = Facebook::Event.all
   haml :events, :locals => { :events => events }
 end
 
-get '/events/:id/:name' do
+get '/termine/:id/:name' do
   event = Facebook::Event.find(params[:id])
   haml :event, :locals => { :event => event }
 end
