@@ -1,17 +1,20 @@
 html, body {
   height: 100%;
+
 }
 
 html {
-  background: #fff;
   overflow: -moz-scrollbars-vertical;
+  background-image: url("/images/bg_pattern.jpg");
+  background-repeat: repeat;
 }
 
 body {
-  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
-  text-align: center;
-  margin: 0;
-background-color: #444;
+font-family: Helvetica, "Helvetica Neue", Helvetica, Arial, sans-serif;
+text-align: center;
+margin: 0;
+color: #444;
+font-size: 0.9em;
 }
 
 #container {
@@ -19,13 +22,11 @@ background-color: #444;
   height: 100%;
   min-height: 100%;
   height: auto !important;
-  color: $black;
   margin: 0px auto;
   padding: 0;
   text-align: left;
-background-color: #fff;
-border-right: 1px solid #eee;
-border-left: 1px solid #eee;
+	background-color: #F6F6F6;
+box-shadow: 2px 2px 5px #888888;
 }
 
 header {
@@ -40,20 +41,19 @@ background-image: url(/images/hundetraining_teamarbeit_bg_header.jpg);
     top: 105px;
 }
 
-nav {
-  font-family:Georgia,serif;
+#mainnav {
   font-size: 100%;
   font-style: normal;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1.7em;
-
   height: 50px;
-
   text-align: center;
   display: table;   /* Allow the centering to work */
   margin: 0 auto;
+  position: relative;
+  top: 137px;
 }
 
 nav a {
@@ -66,17 +66,31 @@ nav ul {
 
 nav ul li {
   display: inline;
-  margin: 0 10px;
+  background-image: url("/images/main_nav_bg.png");
+  float: left;
+  height: 22px;
+  margin-right: 10px;
+  padding-left: 5px;
+  padding-top: 7px;
+  width: 152px;
 }
 
 
 #content {
   clear: both;
-  padding: 0 40px 0;
+  padding: 30px 50px 0;
 }
 
 footer {
-  margin: 0;
+  margin-top: 100px;
   padding: 0 40px 20px;
   clear: both;
+}
+
+#infos_bottom {
+text-align: center;
+font-size: 77%;
+padding-top: 20px;
+margin-top: 70px;
+border-top: 1px solid $light_grey;
 }

@@ -1,8 +1,16 @@
 - @meta_title =  "Über uns - Hundetraining Teamarbeit"
 - @meta_description =  page.mission
 
-%h1="Über uns und unsere Arbeit"
+%h1.h1="Über uns und unsere Arbeit"
 
-%h2.centered= nl2br(page.mission)
+%h2.h2= nl2br(page.mission)
 
 = simple_format(page.description, :class => "description")
+
+.img_team.floatleft
+  %img{ :src => url("/images/esther_follmann.jpg"), :alt => "Esther Follmann, Hundeschule CaneAmi"}
+  %p Esther Follmann
+.img_team.floatright
+  %img{ :src => url("/images/mirjam_aulbach.jpg"), :alt => "Mirjam Aulbach, Hundeschule CaveCani"}
+  %p Mirjam Aulbach
+  .clear

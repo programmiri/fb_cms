@@ -1,12 +1,12 @@
 $background:      #eaeaea;
-$black:           #1a171b;
+$black:           #444444;
 $light_grey:      #999;
 $highlight_grey:  #cacaca;
 $dark_grey:       #333;
 $white:           #f0f0f0;
 
 $red:             #DC6A6A;
-$green:           #24820f;
+$green:           #999B3A;
 $blue:            #2A8FBD;
 
 /** MUST BE FIRST **/
@@ -19,10 +19,20 @@ $blue:            #2A8FBD;
 
 @import "partials/layout";
 
-a {
+#mainnav a {
   outline: none;
   /** link-colors($normal, $hover, $active, $visited, $focus) **/
   @include link-colors($dark_grey, $light_grey, $dark_grey, $dark_grey, $light_grey)
+}
+
+a, a:visited, a:link, a:active {
+color: $green;
+text-decoration: none;
+}
+
+a:hover {
+color: $green;
+text-decoration: underline;
 }
 
 .clear {
@@ -42,10 +52,23 @@ a {
   text-align: center;
 }
 
-h1 {
-  font-family:Georgia,serif;
-  font-size:250%;
-  font-style:italic;
+.floatleft {
+	float: left;
+}
+
+.floatright {
+	float: right;
+}
+
+.clear {
+	clear:both;
+}
+
+.h1 {
+	font-family: "Kreon", "Helvetiva", "Arial", sans-serif;
+	color: #999B3A;
+  font-size:450%;
+ text-shadow: 1px 1px 1px #333333;
   font-weight:normal;
   letter-spacing:-1px;
   line-height:1.2em;
@@ -53,14 +76,11 @@ h1 {
   clear: both;
 }
 
-h2 {
-  font-family:Georgia,serif;
-  font-size:200%;
+.h2 {
+  font-size:250%;
   font-style: normal;
   font-weight:normal;
-  letter-spacing:-1px;
   line-height:1.2em;
-
   margin:0.5em 0;
 }
 
@@ -71,6 +91,7 @@ h2 a {
 article {
   border-bottom: 1px solid $white;
 }
+
 
 .published_at {
   font-family:Georgia,serif;
@@ -83,8 +104,8 @@ article {
 }
 
 .like_box {
-  background: $white;
-  @include border-radius(10px);
+  background: #e2e2e2;
+  @include border-radius(5px);
   padding: 10px;
   margin: 10px;
 }
@@ -97,6 +118,25 @@ article {
   padding: 0 0 0 20px;
   line-height: 20px;
 }
+
+.img_team {
+	background: none repeat scroll 0 0 #FFFFFF;
+	width: 350px;
+  border: 1px solid #EEEEEE;
+  box-shadow: 2px 2px 3px #E2E2E2;
+  margin: 0 15px 15px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.img_team p {
+  font-size: 11px;
+  margin: 0;
+  padding-top: 5px;	
+}
+
+
 
 @import "partials/images";
 @import "partials/events";

@@ -11,7 +11,7 @@ class Facebook::Event < Facebook::GraphObject
   end
 
   def address
-    data["venue"].merge("location" => location)
+    {}.merge({ "venue" => data["venue"]}).merge("location" => location)
   end
 
   def location

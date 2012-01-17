@@ -2,6 +2,7 @@
 %meta{ "http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
 %html{:lang => "en", :class => "no-js"}
   %head
+    %link{ :type => "text/css", :rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Kreon" }/
     %meta{ :charset => "utf-8" }/
     %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
     %meta{ :name => "viewport", :content => "width=device-width;" }/
@@ -40,26 +41,41 @@
       %header
         %a.logo{:href => url("/"), :title => "Hundetraining Teamarbeit"}
           %img{:src => url("/images/logo_hundetraining_teamarbeit.png")}
-        %nav
+        %nav#mainnav
           %ul
             %li
-              %a{:href => url("/") } Start
+              %a{:href => url("/"), :title => "Startseite"} Start
             %li
-              %a{:href => url("/ueberuns") } Über uns
+              %a{:href => url("/ueberuns"), :title => "Über uns"} Über uns
             %li
-              %a{:href => url("/bilder") } Bilder
+              %a{:href => url("/termine"), :title => "Termine" } Termine
             %li
-              %a{:href => url("/termine") } Termine
+              %a{:href => url("/bilder"), :title => "Bilder"} Bilder
+            %li
+              %a{:href => url("/kontakt"), :title => "Kontakt"} Kontakt
+
 
       #content{ :role => "main" }
         = yield
         .clear
 
       %footer
-        .hr_stars
         .like_box
           :plain
-            <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F#{URI.escape(settings.facebook['fb_page_path'])}&amp;width=600&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23f0f0f0&amp;stream=false&amp;header=false&amp;height=258" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:600px; height:258px;" allowTransparency="true"></iframe>
+            <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F#{URI.escape(settings.facebook['fb_page_path'])}&amp;width=780&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23e2e2e2&amp;stream=false&amp;header=false&amp;height=258" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:780px; height:258px;" allowTransparency="true"></iframe>
+
+        #infos_bottom
+          .lefti.floatleft
+            %a{:href= => "http://caneami.de/", :title => "Hundeschule CaneAmi"}
+              %img{:src => url("/images/caneami.jpg")}
+            %p 
+            Esther Follmann ⋅ Mühlbachstr. 7 ⋅ 67435 Neustadt/Weinstrasse
+          .righti.floatright
+            %a{:href= => "http://cavecani.de/", :title => "Hundeschule CaveCani"}
+              %img{:src => url("/images/cavecani.png")}
+            %p 
+            Mirjam Aulbach ⋅ Hinter der Altdörfer Kirche 30A ⋅ 64832 Babenhausen 
+          .clear
 
     %script{ :src => '//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js' }
     -# fall back to local jQuery if necessary

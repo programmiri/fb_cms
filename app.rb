@@ -42,6 +42,11 @@ get '/ueberuns' do
   haml :about, :locals => { :page => page }
 end
 
+get '/kontakt' do
+  page = Facebook::Page.load
+  haml :contact, :locals => { :page => page }
+end
+
 get '/bilder' do
   albums = Facebook::Album.all
   haml :albums, :locals => { :albums => albums }
