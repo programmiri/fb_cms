@@ -149,7 +149,9 @@ nav a { color: #444444; }
 
 nav ul { list-style: none; }
 
-nav ul li { display: inline; background-image: url("/images/main_nav_bg.png"); float: left; height: 22px; margin-right: 10px; padding-left: 5px; padding-top: 7px; width: 152px; }
+nav ul li { display: inline; background-image: url("/images/main_nav_bg.png"); float: left; height: 21px; margin-right: 10px; padding-left: 5px; padding-top: 7px; width: 152px; }
+
+nav ul li.active { font-weight: bold; background-image: url("/images/main_nav_bg_active.png"); }
 
 #content { clear: both; padding: 30px 50px 0; }
 
@@ -181,25 +183,33 @@ a:hover { color: #999b3a; text-decoration: underline; }
 
 .h1 { font-family: "Kreon", "Helvetiva", "Arial", sans-serif; color: #999B3A; font-size: 450%; text-shadow: 1px 1px 1px #333333; font-weight: normal; letter-spacing: -1px; line-height: 1.2em; margin: 0.5em 0; clear: both; }
 
-.h2 { font-size: 250%; font-style: normal; font-weight: normal; line-height: 1.2em; margin: 0.5em 0; }
+.h2 { font-family: "Kreon", "Helvetiva", "Arial", sans-serif; font-size: 250%; font-style: normal; font-weight: normal; letter-spacing: -1px; line-height: 1.2em; margin: 0.5em 0; }
+
+.h2.about { font-size: 150%; }
 
 h2 a { color: #999999; }
 
+.h3 { font-family: "Kreon", "Helvetiva", "Arial", sans-serif; font-size: 150%; font-style: normal; font-weight: normal; letter-spacing: -1px; line-height: 1.2em; margin: 0.5em 0; }
+
 article { border-bottom: 1px solid #f0f0f0; }
 
-.published_at { font-family: Georgia,serif; font-size: 150%; font-style: normal; font-weight: normal; letter-spacing: -1px; line-height: 1.2em; margin: 0.5em 0; }
+.published_at { font-family: "Kreon", "Helvetiva", "Arial", sans-serif; font-size: 150%; font-style: normal; font-weight: normal; letter-spacing: -1px; line-height: 1.2em; margin: 0.5em 0; }
 
 .like_box { background: #e2e2e2; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; padding: 10px; margin: 10px; }
 
 .facebook { background: url("/images/facebook.png") center left no-repeat; height: 20px; min-height: 20px; height: auto !important; padding: 0 0 0 20px; line-height: 20px; }
 
-.img_team { background: none repeat scroll 0 0 #FFFFFF; width: 350px; border: 1px solid #EEEEEE; box-shadow: 2px 2px 3px #E2E2E2; margin: 0 15px 15px; padding: 10px; position: relative; text-align: center; }
+.img { background: none repeat scroll 0 0 #FFFFFF; border: 1px solid #EEEEEE; box-shadow: 2px 2px 3px #E2E2E2; margin: 0 15px 15px; padding: 10px; position: relative; text-align: center; }
 
-.img_team p { font-size: 11px; margin: 0; padding-top: 5px; }
+.img.team { width: 720px; }
+
+.img.logosstart { width: 300px; height: 111px; }
+
+.img p { font-size: 11px; margin: 0; padding-top: 5px; }
 
 #images { list-style: none; margin: 0; padding: 0; }
 
-#images li { width: 190px; float: left; margin: 10px; }
+#images li { width: 200px; height: 200px; float: left; margin: 10px; }
 
 #images a.img_wrap { display: block; width: 180px; padding: 4px; background: #f0f0f0; border: 1px solid #999999; }
 

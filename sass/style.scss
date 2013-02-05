@@ -77,15 +77,31 @@ text-decoration: underline;
 }
 
 .h2 {
+	font-family: "Kreon", "Helvetiva", "Arial", sans-serif;
   font-size:250%;
   font-style: normal;
   font-weight:normal;
+  letter-spacing:-1px;
   line-height:1.2em;
   margin:0.5em 0;
 }
 
+.h2.about {
+	  font-size:150%;
+}
+
 h2 a {
   color: $light_grey;
+}
+
+.h3 {
+	font-family: "Kreon", "Helvetiva", "Arial", sans-serif;
+  font-size:150%;
+  font-style: normal;
+  font-weight:normal;
+  letter-spacing:-1px;
+  line-height:1.2em;
+  margin:0.5em 0;
 }
 
 article {
@@ -94,7 +110,7 @@ article {
 
 
 .published_at {
-  font-family:Georgia,serif;
+  font-family: "Kreon", "Helvetiva", "Arial", sans-serif;
   font-size:150%;
   font-style: normal;
   font-weight:normal;
@@ -119,9 +135,8 @@ article {
   line-height: 20px;
 }
 
-.img_team {
+.img {
 	background: none repeat scroll 0 0 #FFFFFF;
-	width: 350px;
   border: 1px solid #EEEEEE;
   box-shadow: 2px 2px 3px #E2E2E2;
   margin: 0 15px 15px;
@@ -130,7 +145,16 @@ article {
   text-align: center;
 }
 
-.img_team p {
+.img.team {
+	width:720px;
+}
+
+.img.logosstart {
+	width:300px;
+	height:111px;
+}
+
+.img p {
   font-size: 11px;
   margin: 0;
   padding-top: 5px;	

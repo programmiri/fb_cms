@@ -1,10 +1,20 @@
-- @meta_title = "Events"
-- @meta_description = "Events of your facebook page."
+- @meta_title = "Seminare, Workshops & mehr"
+- @meta_description = "Unsere aktuellen Veranstaltungen in der Übersicht"
 
-%h1= @meta_title
+%h2.h1 Seminare, Workshops & mehr
+%p Hier findet sich eine Übersicht über unsere aktuellen Veranstaltungen: 
+%h6.h3 <a href="#eigeneseminare">&raquo; Unsere eigenen Seminare und Workshops</a>
+%h6.h3 <a  href="#externeseminare">&raquo; Seminare und Workshops "on Tour"</a>
 
-%p= @meta_description
+%br
+%br
+%br
 
+%h5.h2 <a name="eigeneseminare">Unsere eigenen Seminare und Workshops</a>
 %ol#events
   - events.each do |event|
     = haml(:_single_event, :layout => false, :locals => { :event => event })
+    
+%h5.h2 <a name="externeseminare">Seminare und Workshops "on Tour"</a>
+
+%p huhu

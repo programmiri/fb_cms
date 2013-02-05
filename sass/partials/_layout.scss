@@ -68,13 +68,17 @@ nav ul li {
   display: inline;
   background-image: url("/images/main_nav_bg.png");
   float: left;
-  height: 22px;
+  height: 21px;
   margin-right: 10px;
   padding-left: 5px;
   padding-top: 7px;
   width: 152px;
 }
 
+nav ul li.active  {
+	font-weight: bold;
+	background-image: url("/images/main_nav_bg_active.png");
+}
 
 #content {
   clear: both;

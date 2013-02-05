@@ -4,6 +4,7 @@
     .cal
       .cal_month= I18n.l(event.start, :format => "%b")
       .cal_day= I18n.l(event.start, :format => "%d")
+      .cal_year= I18n.l(event.start, :format => "%Y")
   .col_r
     - unless locals[:standalone]
       %h2
@@ -12,15 +13,21 @@
     %p.location{ :itemprop => "address", :itemscope => "itemscope", :itemtype => "http://data-vocabulary.org/Address" }
       %strong
         = event.address["location"]
-      = "("
-      %span.street{ :itemprop => "street-address" }>= event.address["street"]
-      = ",&nbsp;" if event.address["street"]
-      %span.city{ :itemprop => "locality" }>= event.address["city"]\
-      = ")"
+      - if event.address["street"] && event.address["city"]
+        = "("
+        %span.street{ :itemprop => "street-address" }>= event.address["street"]
+        = ",&nbsp;" if event.address["street"]
+        %span.city{ :itemprop => "locality" }>= event.address["city"]\
+        = ")"
       %span.region{ :itemprop => "region" }= event.address["state"]
       %span.country{ :itemprop => "country-name" }= event.address["country"]
     %time{ :itemprop => "startDate", :datetime => event.start.iso8601 }
       = event.date
+    - if event.end_time
+      bis
+      %time{ :itemprop => "endDate", :datetime => event.end_time.iso8601 }
+        = event.date(:end_time)
     %p{ :itemprop => "description" }
-      = simple_format(locals[:standalone] ? event.description : event.summary)
-      
+      = simple_format(linkify(locals[:standalone] ? event.description : event.summary))
+    %p 
+      %a{:href=>"http://facebook.com/events/#{event.id}", :title=>event.name} Veranstaltung auf Facebook

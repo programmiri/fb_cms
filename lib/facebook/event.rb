@@ -25,10 +25,16 @@ class Facebook::Event < Facebook::GraphObject
   def start
     Time.zone.parse(data["start_time"])
   end
-
-  def date
-    I18n.l(start, :format => :starting)
+  
+  def end_time
+    data["end_time"] && Time.zone.parse(data["end_time"])
   end
+
+  def date(d= :start)
+    I18n.l(send(d), :format => :starting)
+  end
+  
+
 
   class << self
 

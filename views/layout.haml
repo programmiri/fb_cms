@@ -43,16 +43,16 @@
           %img{:src => url("/images/logo_hundetraining_teamarbeit.png")}
         %nav#mainnav
           %ul
-            %li
+            %li{:class=> request.path_info=="/"? "active":""}
               %a{:href => url("/"), :title => "Startseite"} Start
-            %li
+            %li{:class=> request.path_info[/\A\/ueberuns/]? "active":""}
               %a{:href => url("/ueberuns"), :title => "Über uns"} Über uns
-            %li
-              %a{:href => url("/termine"), :title => "Termine" } Termine
-            %li
+            %li{:class=> request.path_info[/\A\/termine/]? "active":""}
+              %a{:href => url("/termine"), :title => "Termine"} Termine
+            %li{:class=> request.path_info[/\A\/bilder/]? "active":""}
               %a{:href => url("/bilder"), :title => "Bilder"} Bilder
-            %li
-              %a{:href => url("/kontakt"), :title => "Kontakt"} Kontakt
+            %li{:class=> request.path_info[/\A\/kontakt/]? "active":""}
+              %a{:href => url("/kontakt"), :title => "Kontakt", } Kontakt
 
 
       #content{ :role => "main" }
