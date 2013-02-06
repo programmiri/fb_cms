@@ -3,10 +3,19 @@
 
 %h1.h1="Über uns und unsere Arbeit"
 
-%h2.h2.about= nl2br(page.mission)
+%article
 
-= simple_format(page.description, :class => "description")
+  %h3.h2.about= nl2br(page.mission)
 
-.img.img.team
-  %img{ :src => url("/images/esther_mirjam.jpg"), :alt => "Mirjam Aulbach, Hundeschule CaveCani und Esther Follmann, Hundeschule CaneAmi"}
-  %p Mirjam Aulbach & Esther Follmann
+  = simple_format(page.description, :class => "description")
+
+  %h2.h2 Mehr über das Team 
+  %ul
+    %li 
+      %a{ :href => url("/ueberuns/estherfollmann"), :title => "Esther Follmann, Hundeschule CaneAmi"} Esther Follmann
+    %li 
+      %a{ :href=> url("ueberuns/mirjamaulbach"), :title => "Mirjam Aulbach, Hundeschule CaveCani"} Mirjam Aulbach
+
+  .img.team
+    %img{ :src => url("/images/esther_mirjam.jpg"), :alt => "Mirjam Aulbach, Hundeschule CaveCani und Esther Follmann, Hundeschule CaneAmi"}
+    %p Mirjam Aulbach & Esther Follmann

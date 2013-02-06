@@ -3,6 +3,9 @@
 
 %h1.h1=album.name
 
+%p
+  Mit einem Klick auf das Bild kann das Album als Diashow angesehen werden, das Bild wird vergößert und die Bildbeschreibung (wenn vohanden) ist zu lesen.
+
 %ul#images{ :data => { :collection => "photos" } }
   - album.photos.each do |photo|
     %li

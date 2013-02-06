@@ -42,6 +42,16 @@ get '/ueberuns' do
   haml :about, :locals => { :page => page }
 end
 
+get '/ueberuns/estherfollmann' do
+  page = Facebook::Page.load
+  haml :estherfollmann, :locals => { :page => page }
+end
+
+get '/ueberuns/mirjamaulbach' do
+  page = Facebook::Page.load
+  haml :mirjamaulbach, :locals => { :page => page }
+end
+
 get '/kontakt' do
   page = Facebook::Page.load
   haml :contact, :locals => { :page => page }

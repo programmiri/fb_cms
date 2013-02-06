@@ -2,19 +2,30 @@
 - @meta_description = "Unsere aktuellen Veranstaltungen in der Übersicht"
 
 %h2.h1 Seminare, Workshops & mehr
-%p Hier findet sich eine Übersicht über unsere aktuellen Veranstaltungen: 
-%h6.h3 <a href="#eigeneseminare">&raquo; Unsere eigenen Seminare und Workshops</a>
-%h6.h3 <a  href="#externeseminare">&raquo; Seminare und Workshops "on Tour"</a>
 
-%br
-%br
-%br
+%article
+  %p 
+    Hier findet sich eine Übersicht über unsere aktuellen Veranstaltungen: 
+  %h6.h3 
+    %a{ :title => "Eigene Seminare und Workshops", :href => "#eigeneseminare"}
+      &raquo; Unsere eigenen Seminare und Workshops
+  %h6.h3 
+    %a{ :title => "Seminare und Workshops bei anderen Veranstaltern", :href => "#externeseminare"}
+      &raquo; Seminare und Workshops "on Tour"
 
-%h5.h2 <a name="eigeneseminare">Unsere eigenen Seminare und Workshops</a>
-%ol#events
-  - events.each do |event|
-    = haml(:_single_event, :layout => false, :locals => { :event => event })
-    
-%h5.h2 <a name="externeseminare">Seminare und Workshops "on Tour"</a>
+  %br
+  %br
+  %br
 
-%p huhu
+  %h5.h2 
+    %a{ :name => "eigeneseminare"}
+      Unsere eigenen Seminare und Workshops
+  %ol#events
+    - events.each do |event|
+      = haml(:_single_event, :layout => false, :locals => { :event => event })
+      
+  %h5.h2 
+    %a{ :name => "externeseminare"}
+      Seminare und Workshops "on Tour"
+  %p 
+    In Arbeit!
