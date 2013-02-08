@@ -43,18 +43,15 @@ get '/ueberuns' do
 end
 
 get '/ueberuns/estherfollmann' do
-  page = Facebook::Page.load
-  haml :estherfollmann, :locals => { :page => page }
+  haml :estherfollmann
 end
 
 get '/ueberuns/mirjamaulbach' do
-  page = Facebook::Page.load
-  haml :mirjamaulbach, :locals => { :page => page }
+  haml :mirjamaulbach
 end
 
 get '/kontakt' do
-  page = Facebook::Page.load
-  haml :contact, :locals => { :page => page }
+  haml :contact
 end
 
 get '/bilder' do
