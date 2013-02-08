@@ -24,7 +24,7 @@ class Facebook::Album < Facebook::GraphObject
       album_data, photos = cache(id) do
         graph.batch do |batch_api|
           batch_api.get_object(id)
-          batch_api.get_connections(id, "photos")
+          batch_api.get_connections(id, "photos", :limit => 200)
         end
       end
 
