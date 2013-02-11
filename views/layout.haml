@@ -1,7 +1,7 @@
 !!! 5
-%meta{ "http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
-%html{:lang => "en", :class => "no-js"}
+%html{:lang => "de", :class => "no-js"}
   %head
+    %meta{ "http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
     %link{ :type => "text/css", :rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Kreon" }/
     %meta{ :charset => "utf-8" }/
     %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
@@ -35,8 +35,8 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();    
-  %body
-    -# auch ein kommentar
+  %body.test
+    -# auch ein kommentar und ein test
     #container
       %header
         %a.logo{:href => url("/"), :title => "Hundetraining Teamarbeit"}
