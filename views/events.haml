@@ -6,26 +6,6 @@
 %article
   %p 
     Hier findet sich eine Übersicht über unsere aktuellen Veranstaltungen: 
-  %h6.h3 
-    %a{ :title => "Eigene Seminare und Workshops", :href => "#eigeneseminare"}
-      &raquo; Unsere eigenen Seminare und Workshops
-  %h6.h3 
-    %a{ :title => "Seminare und Workshops bei anderen Veranstaltern", :href => "#externeseminare"}
-      &raquo; Seminare und Workshops "on Tour"
-
-  %br
-  %br
-  %br
-
-  %h5.h2 
-    %a{ :name => "eigeneseminare"}
-      Unsere eigenen Seminare und Workshops
   %ol#events
     - events.each do |event|
       = haml(:_single_event, :layout => false, :locals => { :event => event })
-      
-  %h5.h2 
-    %a{ :name => "externeseminare"}
-      Seminare und Workshops "on Tour"
-  %p 
-    In Arbeit!

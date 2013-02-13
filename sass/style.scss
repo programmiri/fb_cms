@@ -7,7 +7,8 @@ $white:           #f0f0f0;
 
 $red:             #DC6A6A;
 $green:           #999B3A;
-$blue:            #2A8FBD;
+$light_green:     #ccdd73;
+$blue:            #6f9fa1;
 
 /** MUST BE FIRST **/
 @import "partials/before";
@@ -26,12 +27,12 @@ $blue:            #2A8FBD;
 }
 
 a, a:visited, a:link, a:active {
-color: $green;
+color: $blue;
 text-decoration: none;
 }
 
 a:hover {
-color: $green;
+color: $blue;;
 text-decoration: underline;
 }
 
@@ -104,30 +105,68 @@ h2 a {
   margin:0.5em 0;
 }
 
-article {
-  border-bottom: 1px solid $white;
+
+article p {
+font-size: 1.1em;
 }
 
+.fb_feed p{
+  min-height: 60px;
+  font-size: 90%;
+  padding-top: 5px;
+  margin-bottom: 5px;
+  margin-top: 8px;
+  line-height: 1.15;
+}
+
+.fb_feed_date {
+background: $light_green;
+height: 62px;
+width: 62px;
+-webkit-border-radius: 300px 300px 300px 300px;
+-moz-border-radius: 300px 300px 300px 300px;
+border-radius: 300px 300px 300px 300px;
+float: left;
+margin-right: 10px;
+margin-left: -8px;
+margin-top: -2px;
+}
 
 .published_at {
-  font-family: "Kreon", "Helvetiva", "Arial", sans-serif;
-  font-size:150%;
+  font-size:110%;
+  font-weight: bold;
+  color: #FFF;
   font-style: normal;
   font-weight:normal;
   letter-spacing:-1px;
-  line-height:1.2em;
-  margin:0.5em 0;  
+  line-height:90%;
+  text-shadow: 1px 1px 1px #888;
+  filter: dropshadow(color=#888, offx=1, offy=1);
+}
+
+.feed_day {
+  float:left;
+  padding-top: 18px;
+  padding-left: 8px;
+  padding-right: 2px;
+}
+
+.feed_month {
+  padding-top: 18px;
+
+}
+
+.feed_year {
+  padding-left: 16px;
+
 }
 
 .like_box {
-  background: #e2e2e2;
-  @include border-radius(5px);
-  padding: 10px;
-  margin: 10px;
+  @include border-radius(10px);
+  margin: 20px;
 }
 
 .facebook {
-  background: url('/images/facebook.png') center left no-repeat;
   height: 20px;
   min-height: 20px;
   height: auto !important;
@@ -162,6 +201,17 @@ article {
   font-size: 11px;
   margin: 0;
   padding-top: 5px;	
+}
+
+.gradient {
+  background: rgb(229,229,229); /* Old browsers */
+  background: -moz-linear-gradient(left,  rgba(229,229,229,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(229,229,229,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(229,229,229,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(229,229,229,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(229,229,229,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(229,229,229,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */ 
 }
 
 
