@@ -133,25 +133,31 @@ td { vertical-align: top; }
 /** COMPASS HELPERS **/
 html, body { height: 100%; }
 
-html { overflow: -moz-scrollbars-vertical; background-image: url("/images/bg_pattern.jpg"); background-repeat: repeat; }
+html { overflow: -moz-scrollbars-vertical; background-image: url("/images/straws.png"); background-repeat: repeat; }
 
 body { font-family: Helvetica, "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center; margin: 0; color: #444; font-size: 0.9em; }
 
-#container { width: 900px; height: 100%; min-height: 100%; height: auto !important; margin: 0px auto; padding: 0; text-align: left; background-color: #F6F6F6; box-shadow: 2px 2px 5px #888888; }
+#container { width: 900px; height: 100%; min-height: 100%; height: auto !important; margin-top: 30px; margin-bottom: 20px; margin-left: auto; margin-right: auto; padding: 10px; text-align: left; background-color: #FCFCFC; box-shadow: 2px 2px 5px #888888; }
 
-header { height: 250px; background-image: url(/images/hundetraining_teamarbeit_bg_header.jpg); }
+header { height: 300px; background-color: #333; border-bottom: 1px solid #ccc; }
 
+/*Background-Color Platzhalter
+*/
 .logo { left: 25px; outline: medium none; position: relative; top: 105px; }
 
-#mainnav { font-size: 100%; font-style: normal; font-weight: normal; text-transform: uppercase; letter-spacing: 1px; line-height: 1.7em; height: 50px; text-align: center; display: table; /* Allow the centering to work */ margin: 0 auto; position: relative; top: 137px; }
+#mainnav { font-size: 100%; font-style: normal; font-weight: normal; text-transform: uppercase; letter-spacing: 1px; line-height: 1.7em; text-align: center; display: table; /* Allow the centering to work */ margin: 0 auto; position: relative; top: 185px; }
 
-nav a { color: #444444; }
+nav a { color: #444444; display: inline-block; height: 30px; line-height: 30px; }
+
+nav ul li.active a { font-weight: bold; height: 31px; }
 
 nav ul { list-style: none; }
 
-nav ul li { display: inline; background-image: url("/images/main_nav_bg.png"); float: left; height: 21px; margin-right: 10px; padding-left: 5px; padding-top: 7px; width: 152px; }
+nav ul li { float: left; margin-right: 10px; padding-left: 5px; width: 152px; -webkit-border-radius: 5px 5px 0px 0px; -moz-border-radius: 5px 5px 0px 0px; border-radius: 5px 5px 0px 0px; -webkit-box-shadow: 0px 0px 2px px #222222; -moz-box-shadow: 0px 0px 2px px #222222; box-shadow: 0px 0px 2px px #222222; background: #ffffff; background: rgba(255, 255, 255, 0.8); -webkit-transition: background 0.2s ease-in; -moz-transition: background 0.2s ease-in; -ms-transition: background 0.2s ease-in; -o-transition: background 0.2s ease-in; transition: background 0.2s ease-in; }
 
-nav ul li.active { font-weight: bold; background-image: url("/images/main_nav_bg_active.png"); }
+nav ul li:hover { background: white; }
+
+nav ul li.active { background: white; }
 
 #content { clear: both; padding: 30px 50px 0; }
 
