@@ -5,7 +5,7 @@ html, body {
 
 html {
   overflow: -moz-scrollbars-vertical;
-  background-image: url("/images/bg_pattern.jpg");
+  background-image: url("/images/straws.png");
   background-repeat: repeat;
 }
 
@@ -22,17 +22,24 @@ font-size: 0.9em;
   height: 100%;
   min-height: 100%;
   height: auto !important;
-  margin: 0px auto;
-  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
   text-align: left;
-	background-color: #F6F6F6;
-box-shadow: 2px 2px 5px #888888;
+  background-color: #FCFCFC;
+  box-shadow: 2px 2px 5px #888888;
 }
 
 header {
-height: 250px;
-background-image: url(/images/hundetraining_teamarbeit_bg_header.jpg);
+height: 300px;
+background-color: #333;
+border-bottom: 1px solid #ccc;
 }
+/*Background-Color Platzhalter
+*/
+
 
 .logo {
     left: 25px;
@@ -48,16 +55,23 @@ background-image: url(/images/hundetraining_teamarbeit_bg_header.jpg);
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1.7em;
-  height: 50px;
   text-align: center;
   display: table;   /* Allow the centering to work */
   margin: 0 auto;
   position: relative;
-  top: 137px;
+  top: 185px;
 }
 
 nav a {
   color: $black;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+}
+
+nav ul li.active a {
+  font-weight: bold;
+  height: 31px;  
 }
 
 nav ul {
@@ -65,19 +79,32 @@ nav ul {
 }
 
 nav ul li {
-  display: inline;
-  background-image: url("/images/main_nav_bg.png");
   float: left;
-  height: 21px;
   margin-right: 10px;
   padding-left: 5px;
-  padding-top: 7px;
   width: 152px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px; 
+  -webkit-box-shadow: 0px 0px 2px px #222222;
+  -moz-box-shadow: 0px 0px 2px px #222222;
+  box-shadow: 0px 0px 2px px #222222;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.8);
+
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
 }
 
-nav ul li.active  {
-	font-weight: bold;
-	background-image: url("/images/main_nav_bg_active.png");
+nav ul li:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+nav ul li.active {
+  background: rgba(255, 255, 255, 1);
 }
 
 #content {
