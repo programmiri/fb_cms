@@ -40,7 +40,7 @@
     #container
       %header
         %a.logo{:href => url("/"), :title => "Hundetraining Teamarbeit"}
-          %img{:src => url("/images/logo_hundetraining_teamarbeit.png")}
+          %img{:src => url("/images/logo_hundetraining_teamarbeit.png"), :alt => "Hundetraining Teamarbeit"}
         %nav#mainnav
           %ul
             %li{:class=> request.path_info=="/"? "active":""}
@@ -66,13 +66,13 @@
 
         #infos_bottom
           .lefti.floatleft
-            %a{:href= => "http://caneami.de/", :title => "Hundeschule CaneAmi"}
-              %img{:src => url("/images/caneami.jpg")}
+            %a{:href => "http://caneami.de/", :title => "Hundeschule CaneAmi"}
+              %img{:src => url("/images/caneami.jpg", :alt => "Hundeschule CaneAmi")}
             %p 
             Esther Follmann ⋅ Mühlbachstr. 7 ⋅ 67435 Neustadt/Weinstrasse
           .righti.floatright
-            %a{:href= => "http://cavecani.de/", :title => "Hundeschule CaveCani"}
-              %img{:src => url("/images/cavecani.png")}
+            %a{:href => "http://cavecani.de/", :title => "Hundeschule CaveCani"}
+              %img{:src => url("/images/cavecani.png", :alt => "Hundeschule Hundetraining CaveCani")}
             %p 
             Mirjam Aulbach ⋅ Hinter der Altdörfer Kirche 30A ⋅ 64832 Babenhausen 
           .clear

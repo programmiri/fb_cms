@@ -43,9 +43,9 @@
     %article.fb_feed
       .published_at.fb_feed_date
         %time{ :pubdate => "pubdate", :datetime => post.upated_at.iso8601 }
-          .feed_day= I18n.l(post.upated_at, :format => "%d.") 
-          .feed_month= I18n.l(post.upated_at, :format => "%b")
-          .feed_year= I18n.l(post.upated_at, :format => "%Y")
+          %span.feed_day= I18n.l(post.upated_at, :format => "%d.") 
+          %span.feed_month= I18n.l(post.upated_at, :format => "%b")
+          %span.feed_year= I18n.l(post.upated_at, :format => "%Y")
       %p= nl2br(linkify post.message)
 
 
