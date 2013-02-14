@@ -3,7 +3,7 @@
 
 %h2.h1 Willkommen
 
-.leftcol
+.leftcol.floatleft
   %h1.h2.about Hundetraining ist für uns in mehr als einer Hinsicht Teamarbeit!
 
   %article
@@ -27,16 +27,16 @@
       ="."
 
 
-    .img.logosstart.floatleft
+    .img.floatleft
       %img{ :src => url("/images/cumcane_logo.png"), :alt => "CumCane"}
-    .img.img.logosstart.floatleft
+    .img.floatleft
       %img{ :src => url("/images/logo-ibh.gif"), :alt => "IBH"}
     .clear
     %br
     %br
     %br
 
-.rightcol
+.rightcol.floatright.gradient_trans
   %h2.h3 Statusupdates
 
   - posts.each do |post|

@@ -1,13 +1,11 @@
-$background:      #eaeaea;
-$black:           #444444;
-$light_grey:      #999;
-$highlight_grey:  #cacaca;
-$dark_grey:       #333;
-$white:           #f0f0f0;
+$black:           #444444; /*bspw. schrift */ 
+$light_grey:      #999; 
+$highlight_grey:  #FCFCFC; /* bspw. Hintergrund */
+$dark_grey:       #333; 
+$white:           #ffffff;
 
-$red:             #DC6A6A;
 $green:           #999B3A;
-$light_green:     #ccdd73;
+$light_green:     #cbdc72;
 $blue:            #6f9fa1;
 
 /** MUST BE FIRST **/
@@ -20,11 +18,11 @@ $blue:            #6f9fa1;
 
 @import "partials/layout";
 
-#mainnav a {
-  outline: none;
-  /** link-colors($normal, $hover, $active, $visited, $focus) **/
-  @include link-colors($dark_grey, $light_grey, $dark_grey, $dark_grey, $light_grey)
-}
+
+/*
+ * Mehr oder minder allgemeines 
+ *
+*/
 
 a, a:visited, a:link, a:active {
 color: $blue;
@@ -32,38 +30,12 @@ text-decoration: none;
 }
 
 a:hover {
-color: $blue;;
+color: $blue;
 text-decoration: underline;
 }
 
-.clear {
-  clear: both;
-}
 
-.hint {
-  font-size: 11px;
-  font-style: normal;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: normal;
-  line-height: 1.6em;
-}
 
-.centered {
-  text-align: center;
-}
-
-.floatleft {
-	float: left;
-}
-
-.floatright {
-	float: right;
-}
-
-.clear {
-	clear:both;
-}
 
 .h1 {
 	font-family: "Kreon", "Helvetiva", "Arial", sans-serif;
@@ -91,9 +63,6 @@ text-decoration: underline;
 	  font-size:150%;
 }
 
-h2 a {
-  color: $light_grey;
-}
 
 .h3 {
 	font-family: "Kreon", "Helvetiva", "Arial", sans-serif;
@@ -106,9 +75,32 @@ h2 a {
 }
 
 
-article p {
-font-size: 1.1em;
+
+
+/*
+* Spezielleres
+*
+*/
+
+.leftcol {
+width: 540px;
 }
+
+.rightcol {
+  width: 280px;
+  margin-right: -30px;
+  padding-right: 30px;
+  padding-left: 20px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  border-left: 1px solid $light_green;
+  border-top: 1px solid $light_green;
+  border-bottom: 1px solid $light_green;
+}
+
+
+/* PRÜFEN */
 
 .fb_feed p{
   min-height: 60px;
@@ -120,16 +112,16 @@ font-size: 1.1em;
 }
 
 .fb_feed_date {
-background: $light_green;
-height: 62px;
-width: 62px;
--webkit-border-radius: 300px 300px 300px 300px;
--moz-border-radius: 300px 300px 300px 300px;
-border-radius: 300px 300px 300px 300px;
-float: left;
-margin-right: 10px;
-margin-left: -8px;
-margin-top: -2px;
+  background: $light_green;
+  height: 62px;
+  width: 62px;
+  -webkit-border-radius: 300px 300px 300px 300px;
+  -moz-border-radius: 300px 300px 300px 300px;
+  border-radius: 300px 300px 300px 300px;
+  float: left;
+  margin-right: 10px;
+  margin-left: -8px;
+  margin-top: -2px;
 }
 
 .published_at {
@@ -174,36 +166,68 @@ margin-top: -2px;
   line-height: 20px;
 }
 
+
+/* allgemeine def. image */ 
+
 .img {
-	background: none repeat scroll 0 0 #FFFFFF;
-  border: 1px solid #EEEEEE;
-  box-shadow: 2px 2px 3px #E2E2E2;
-  margin: 0 15px 15px;
-  padding: 10px;
-  position: relative;
+
+}
+
+figure {
+  width: 850px;
   text-align: center;
 }
 
-.img.team {
-	width:720px;
+figure img {
+  background: none repeat scroll 0 0 #fff;
+  padding: 10px 10px 50px 10px;
+  border: 1px solid #EEEEEE;
+  box-shadow: 2px 2px 3px $light_grey;
 }
 
-.img.teamsingle {
-  width:600px;
+figcaption {
+  color: #333;
+  font-size: 0.8em;
+  font-variant: small-caps;
+  padding-bottom: 17px;
+  margin-top: -35px;
+  margin-bottom: 50px;
 }
 
-.img.logosstart {
-	width:300px;
-	height:111px;
-}
 
-.img p {
+/* 
+ * Nützliche Klassen für diverses
+ *
+*/ 
+
+
+/* .hint {
   font-size: 11px;
-  margin: 0;
-  padding-top: 5px;	
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  line-height: 1.6em;
+}*/ 
+
+.centered {
+  text-align: center;
 }
 
-.gradient {
+.floatleft {
+  float: left;
+}
+
+.floatright {
+  float: right;
+}
+
+.clear {
+  clear:both;
+}
+
+/* Verlauf grau zu transparent */
+.gradient_trans {
   background: rgb(229,229,229); /* Old browsers */
   background: -moz-linear-gradient(left,  rgba(229,229,229,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(229,229,229,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
