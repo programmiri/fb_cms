@@ -18,7 +18,7 @@ describe Text do
 
   describe "linkify_feed" do
     it "delete url from message, set link with name" do
-      linkify_feed("hi http://google.com ho", "Google Link").should eql("hi <a href=\"http://google.com\">&raquo;Google Link</a> ho")
+      linkify_feed("hi http://google.com ho", "Google Link").should eql("hi <a href=\"http://google.com\" title=\"Google Link\">&raquo;Google Link</a> ho")
     end
   end
 

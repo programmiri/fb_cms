@@ -13,7 +13,7 @@ module Text
   def linkify_feed(text, name)
     text = text.to_s.dup
     generic_URL = Regexp.new('(^|[\n ])([\w]+?://[\w]+[^ \"\n\r\t<]*)', Regexp::MULTILINE | Regexp::IGNORECASE)
-    text.gsub!(generic_URL, '\1<a href="\2">&raquo;' + name + '</a>')
+    text.gsub!(generic_URL, '\1<a href="\2" title="' + name + '">&raquo;' + name + '</a>')
     text
   end
   # brauchts nicht, weil fb nur per http übergibt, aber aufheben
