@@ -1,3 +1,4 @@
+#Hilfsfunktionen für JS, CSS etc.
 module Assets
   module Helpers
 
