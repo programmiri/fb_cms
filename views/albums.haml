@@ -1,14 +1,36 @@
-- @meta_title = "Bilder"
-- @meta_description = "Bilderalben aus unserer Facebook Seite"
+- @meta_title = "Impressionen und Eindrücke"
+- @meta_description = "Impressionen und Eindrücke, Facebook Alben Hundetraining Teamarbeit"
 
-%h1= @meta_title
+%article#albums
+  %header
+    %h1.h1= @meta_title
+  %p
+  Einen kleinen Einblick in unsere Arbeit könnt ihr über unsere Bilderalben gewinnen. Viel Spaß! 
 
-%ul#images{ :data => { :collection => "albums" } }
+  %ul 
   - albums.each do |album|
     %li
-      %a.img_wrap{ :href => url(album.path), :title => album.description }
-        %div.cover{ :style => "background-image: url(#{album.cover})" }
-      %a.title{ :href => url(album.path), :title => album.description }
-        = album.name
+      #albumcov.floatleft
+        %a.wrap{ :href => url(album.path), :title => album.name }
+          %div.acover{ :style => "background-image: url(#{album.cover})" }
+        .stack2
+          .stack1
+        
+      #div.albuminfo.gradient_transverti.floatright
+        %h2
+          %a.title{ :href => url(album.path), :title => album.description }
+            %b
+              &raquo;
+            = album.name
 
+        %p.albumdates
+          Aktualisiert:
+          = I18n.l(album.updated_date, :format => "%d.%m.%y")
+          &bull;
+          Erstellt: 
+          = I18n.l(album.created_date, :format => "%d.%m.%y")
 
+        -if album.description
+          %p
+            = nl2br(linkify truncate(album.description, 410))
+      .clear
