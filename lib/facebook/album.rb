@@ -1,9 +1,14 @@
+
 class Facebook::Album < Facebook::GraphObject
 
   attr_accessor :photos
 
+  def name
+    data["name"] 
+  end
+
   def description
-    data["description"] || name
+    data["description"] 
   end
   
   def path
@@ -15,7 +20,16 @@ class Facebook::Album < Facebook::GraphObject
   end
 
   def cover
-    "http://graph.facebook.com/#{id}/picture"
+    "http://graph.facebook.com/#{data["cover_photo"]}/picture"
+  end
+
+
+  def created_date
+    Time.zone.parse(data["created_time"])
+  end
+
+  def updated_date
+    Time.zone.parse(data["updated_time"])
   end
 
   class << self
