@@ -1,20 +1,24 @@
 - @meta_title = "Willkommen - Hundetraining Teamarbeit"
 - @meta_description = "Hundetraining Teamarbeit ist die Zusammenarbeit zwischen Esther Follmann, Hundeschule CaneAmi und Mirjam Aulbach, Hundeschule Cave Cani. Wir sind beide geprüfte CumCane Trainerinnen."
 
-%h2.h1 Willkommen
+%article
+  %h2.h1 Willkommen
 
-.leftcol.floatleft
-  %h1.h2.about Hundetraining ist für uns in mehr als einer Hinsicht Teamarbeit!
-
-  %article
+  .leftcol.floatleft
+    %header
+      %h1.h2
+        Hundetraining ist für uns in mehr als einer Hinsicht Teamarbeit!
     %p
       Hundetraining Teamarbeit ist die Zusammenarbeit zwischen Esther Follmann, 
       %a{ :title => "Hundeschule CaneAmi", :href => "http://caneami.de" }
         Hundeschule CaneAmi
       und Mirjam Aulbach,
       %a{ :title => "Hundeschule Hundetraining CaveCani", :href => "http://cavecani.de" }
-        Hundeschule Cave Cani
-      ="."
+        Hundeschule Cave Cani.
+
+    %figure.logos
+      %img{ :src => url("/images/cumcane_logo.png"), :alt => "Hundeschule & Praxis für Tierverhaltenstherapie CumCane"}
+      %img{ :src => url("/images/logo-ibh.gif"), :alt => "Internationaler Berufsverband der Hundetrainer/innen e.V."}
 
     %p 
       Wir beide sind geprüfte 
@@ -24,28 +28,100 @@
       Zudem sind wir beide geprüftes Mitglied im 
       %a{ :title => "Internationaler Berufsverband der Hundetrainer/innen e.V.", :href => "http://ibh-hundeschulen.de"}
         IBH - Internationaler Berufsverband der Hundetrainer/innen e.V.
-      ="."
 
 
-    .img.floatleft
-      %img{ :src => url("/images/cumcane_logo.png"), :alt => "CumCane"}
-    .img.floatleft
-      %img{ :src => url("/images/logo-ibh.gif"), :alt => "IBH"}
-    .clear
-    %br
-    %br
-    %br
+    %section#startgallery
+      %p.gradient_transverti
+        %span.h2.minih2
+          Das
+        %span.h1
+          Team
+        %span.h2.minih2
+          bei der
+        %span.h1
+          Arbeit
+        %br
+        %br
+        Esther & Mirjam bei der Arbeit und ein wenig privat. 
+        %br
+        Ein Klick auf die Bilder öffnet die Orignalgrösse.
 
-.rightcol.floatright.gradient_trans
-  %h2.h3 Statusupdates
+      %ul{:data => { 'collection' => 'photos' }}
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart01.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY"}
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart01thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart02.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart02thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart03.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart03thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart04.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart04thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart05.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart05thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart06.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart06thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart07.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart07thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart08.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart08thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart09.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart09thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart10.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart10thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart11.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart11thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart12.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart12thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart13.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart13thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart14.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart14thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart15.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart15thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart16.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart16thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart17.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart17thumb.jpg)" }
+        %li
+          %a.img_wrap{ :href => "images/start/teamarbeitstart18.jpg", :rel => "photo", :title => "Bild &copy; MARKUS EISSLER PHOTOGRAPHY" }
+            %div.cover{ :style => "background-image: url(images/start/teamarbeitstart18thumb.jpg)" }
+      .clear
 
-  - posts.each do |post|
-    %article.fb_feed
-      .published_at.fb_feed_date
-        %time{ :pubdate => "pubdate", :datetime => post.upated_at.iso8601 }
-          %span.feed_day= I18n.l(post.upated_at, :format => "%d.") 
-          %span.feed_month= I18n.l(post.upated_at, :format => "%b")
-          %span.feed_year= I18n.l(post.upated_at, :format => "%Y")
-      %p= nl2br(linkify post.message)
 
+  .rightcol.floatright.gradient_trans
+    %h2.h3 Statusupdates
 
+    - posts.each do |post|
+      %article.fb_feed
+        .fb_feed_date.floatleft
+          %time{ :pubdate => "pubdate", :datetime => post.upated_at.iso8601 }
+            .feed_day_month= I18n.l(post.upated_at, :format => "%d.&nbsp;%b")
+            .feed_year= I18n.l(post.upated_at, :format => "%Y")
+        - if post.data["picture"]
+          %a{ :href => " #{post.data["link"]}", :title => " #{ nl2delete(deletelink post.message) } "}
+            %img.floatright.postpicture{ :src => post.picture, :alt => " #{ nl2delete(deletelink post.message) } ",  :title => " #{ nl2delete(deletelink post.message) } " }
+        - if post.data["name"]
+          %p= linkify_feed(post.message, post.name)
+        - else
+          %p= nl2br(linkify post.message)
+        .clear
+        %hr
+    %p
+      dasadas
+    %clear
