@@ -12,6 +12,18 @@ class Facebook::Post < Facebook::GraphObject
     I18n.l(upated_at, :format => :date)
   end
 
+  def picture
+    data["picture"]
+  end
+
+  def link
+    data["link"]
+  end
+
+  def name
+    data["name"]
+  end
+
   class << self
 
     def all
