@@ -31,7 +31,7 @@ body {
   box-shadow: 2px 2px 5px #888888;
 }
 
-header {
+#mainheader {
 height: 300px;
 background-image:  url("/images/hundetraining-teamarbeit-header01.jpg");
 border-bottom: 1px solid #ccc;
@@ -115,7 +115,7 @@ border-bottom: 1px solid #ccc;
 
 /*ID für "Main" Footer statt allgemein footer */ 
 #mainfooter {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 0 40px 20px;
   clear: both;
 }
@@ -123,6 +123,5 @@ border-bottom: 1px solid #ccc;
 #infos_bottom {
 text-align: center;
 font-size: 77%;
-padding-top: 20px;
 margin-top: 70px;
 }

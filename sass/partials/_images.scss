@@ -1,7 +1,116 @@
 /*
-* CSS Angaben für album + albums
+* CSS Angaben für Alben + Einzelansicht Alben
 *
 */
+
+/* Album */
+
+#albums {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+#albums li {
+  margin-bottom: 80px;
+}
+
+#albumcov {
+  position: absolute;
+}
+
+#albumcov a.wrap {
+  position: absolute;
+  display: block;
+  width: 500px;
+  padding: 8px;
+  background: $white;
+  border: 1px solid $light_grey;
+   box-shadow: 2px 2px 3px $light_grey;
+  -moz-box-shadow: 2px 2px 3px $light_grey;
+  -webkit-box-shadow: 2px 2px 3px $light_grey;
+  z-index: 3;
+}
+
+#albumcov .stack1 {
+  position: relative;
+  width: 518px;
+  height: 328px;
+  background: $white;
+  border: 1px solid $light_grey;
+  box-shadow: 2px 2px 3px $light_grey;
+  -moz-box-shadow: 2px 2px 3px $light_grey;
+  -webkit-box-shadow: 2px 2px 3px $light_grey;
+  z-index: 2;
+  transform: rotate(6deg);
+  -ms-transform: rotate(6deg); /* IE 9 */
+  -webkit-transform: rotate(6deg); /* Safari and Chrome */
+  -o-transform: rotate(6deg); /* Opera */
+  -moz-transform: rotate(6deg); /* Firefox */
+}
+
+#albumcov .stack2 {
+  position: relative;
+  width: 518px;
+  height: 328px;
+  margin-left: -5px;
+  margin-top: -5px;
+  background: $white;
+  border: 1px solid $light_grey;
+  box-shadow: 2px 2px 3px $light_grey;
+  -moz-box-shadow: 2px 2px 3px $light_grey;
+  -webkit-box-shadow: 2px 2px 3px $light_grey;
+  z-index: 1;
+  transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg); /* IE 9 */
+  -webkit-transform: rotate(-3deg); /* Safari and Chrome */
+  -o-transform: rotate(-3deg); /* Opera */
+  -moz-transform: rotate(-3deg); /* Firefox */
+}
+
+
+
+#albums h2 {
+margin-top:0px;
+margin-bottom: 0px;
+}
+
+
+
+#albumcov a.wrap:hover {
+  margin-left: 1px;
+  margin-top: 1px;
+  border: 1px solid $light_grey;
+}
+
+
+#albums .acover {
+  width: 500px;
+  height: 310px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.albuminfo {
+  width: 280px;
+  height: 310px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  padding: 10px;
+  font-size: 90%;
+}
+
+.albumdates {
+  font-size: 80%;
+  font-variant: small-caps; 
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+
+/* Einzelansicht */
+
 
 #images {
   list-style: none;
@@ -9,23 +118,27 @@
   padding: 0;
 }
 
+
 #images li {
-  width: 240px;
-  height: 200px;
+  width: 350px;
+  height: 213px;
   float: left;
-  margin: 10px;
+  margin: 30px;
 }
 
 #images a.img_wrap {
   display: block;
-  width: 180px;
-  padding: 4px;
+  width: 320px;
+  padding: 8px;
   background: $white;
   border: 1px solid $light_grey;
+  box-shadow: 2px 2px 3px $light_grey;
+  -moz-box-shadow: 2px 2px 3px $light_grey;
+  -webkit-box-shadow: 2px 2px 3px $light_grey
 }
 
 #images a.img_wrap:hover {
-  border: 1px solid $highlight_grey;
+  border: 1px solid $light_green;
 }
 
 #images a.title {
@@ -36,10 +149,9 @@
   margin: 5px;
 }
 
-.cover {
-  width: 180px;
-  height: 120px;
-
+#images .cover {
+  width: 320px;
+  height: 213px;
   background-position: center center;
   background-repeat: no-repeat;
 }
