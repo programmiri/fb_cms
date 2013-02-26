@@ -2,75 +2,82 @@
 - @meta_description =  "Unsere Kontaktdaten, Impressum und Infos zur Seite"
 
 
-%h1.h1="Kontakt, Impressum & mehr"
+%article
+  %header
+    %h1.h1 Kontakt, Impressum & mehr
 
-.leftcol
-  %h2.h2= "Kontaktdaten und Verantwortliche"
+  .leftcol.floatleft
+    %h2.h2 Kontaktdaten und Verantwortliche
 
-  %p 
-    Mail an uns: kontakt@hundetraining-teamarbeit.de
- 
-  %h3 
-    Kontaktdaten Esther Follmann
-  %p
-    CaneAmi Hundeschule und Verhaltensberatung
-    %br
-    Einzelunternehmen, Inhaberin: Esther Follmann
-    %br
-    Mühlbachstr. 7
-    %br
-    67435 Neustadt/W.
-    %br 
-    %br
-    Tel. 06327 – 96 00 99
-    %br
-    info@caneami.de
-    %br
-    %strong   
-      web: 
-      %a{ :href => "http://caneami.de", :title => "Hundeschule CaneAmi" }
-        www.caneami.de
+    %p 
+      Mail an uns: kontakt@hundetraining-teamarbeit.de
+    %p
+      %strong
+        Unsere Facebookseite: 
+        %a{ :href => "http://www.facebook.com/hundetrainingteamarbeit", :title => "Hundetraining Teamarbeit bei Facebook" } 
+          www.facebook.com/hundetrainingteamarbeit
+      %br
+      %br
+   
+    %h3 Kontaktdaten Esther Follmann
+    %p
+      CaneAmi Hundeschule und Verhaltensberatung 
+      %br
+      Einzelunternehmen, Inhaberin: Esther Follmann
+      %br
+      Mühlbachstr. 7
+      %br
+      67435 Neustadt/W.
+    %p 
+      Tel. 06327 – 96 00 99
+      %br
+      info@caneami.de
+      %br
+      %strong   
+        web: 
+        %a{ :href => "http://caneami.de", :title => "Hundeschule CaneAmi" }
+          www.caneami.de
 
-  %h3 Kontaktdaten Mirjam Aulbach
-  %p
-    CaveCani - menschen.hunde.lernen
-    %br
-    Einzelunternehmen, Inhaberin: Mirjam Aulbach
-    %br
-    Hinter der Altdörfer Kirche 30a
-    %br
-    64832 Babenhausen
-    %br 
-    %br
-    Tel.  06073 - 747 85 31
-    %br
-    mirjam@cavecani.de
-    %br
-    %strong 
-      web: 
-      %a{ :href => "http://cavecani.de",  :title => "Hundeschule Hundetraining CaveCani" }
-        www.cavecani.de
-.rightcol
-  %h2 Über die Webseite 
-  %p
-    %a{ :href => "http://www.ruby-lang.org"}
-      %img{ :alt => "Ruby", :src => url("/images/ruby.png") }
-
-    %a{ :href => "http://dev.w3.org/html5/spec/Overview.html" }
-      %img{ :src => url("/images/html5.png"), :alt => "HTML5" }
-
-    %a{ :href => "http://html5boilerplate.com" }
-      %img{ :src =>  url("/images/boilerplate.png"), :alt => "HTML5 Boilerplate" }
+    %h3 Kontaktdaten Mirjam Aulbach
+    %p
+      CaveCani - menschen.hunde.lernen
+      %br
+      Einzelunternehmen, Inhaberin: Mirjam Aulbach
+      %br
+      Hinter der Altdörfer Kirche 30a
+      %br
+      64832 Babenhausen
+    %p
+      Tel.  06073 - 747 85 31
+      %br
+      mirjam@cavecani.de
+      %br
+      %strong 
+        web: 
+        %a{ :href => "http://cavecani.de",  :title => "Hundeschule Hundetraining CaveCani" }
+          www.cavecani.de
   
-  %p 
-    %b
-      hundetraining-teamarbeit.de 
-    wurde umgesetzt mit 
-    %a{ :href => "https://github.com/fabrik42/fb_cms", :title => "fb_cms auf Github" } 
-      fb_cms
-    , einer Open Source Ruby Lib, mit der wir Facebook als (kleines) CMS nutzen. 
-  %p 
-    fb_cms nutzt HTML5 Boilerplate, womit unsere 3 Webseiten einfach toll zusammen passen ;)
+  .rightcol.floatright
+    %h3 Über die Webseite 
+    %p
+      %a{ :href => "http://www.ruby-lang.org"}
+        %img{ :alt => "Ruby", :src => url("/images/ruby.png") }
+
+      %a{ :href => "http://dev.w3.org/html5/spec/Overview.html" }
+        %img{ :src => url("/images/html5.png"), :alt => "HTML5" }
+
+      %a{ :href => "http://html5boilerplate.com" }
+        %img{ :src =>  url("/images/boilerplate.png"), :alt => "HTML5 Boilerplate" }
     
-    
+    %p 
+      %b
+        hundetraining-teamarbeit.de 
+      wurde umgesetzt mit 
+      %a{ :href => "https://github.com/fabrik42/fb_cms", :title => "fb_cms auf Github" } 
+        fb_cms
+      , einer Open Source Ruby Lib, mit der wir Facebook als (kleines) CMS nutzen. 
+    %p 
+      fb_cms nutzt HTML5 Boilerplate, womit unsere 3 Webseiten einfach toll zusammen passen ;)
+      
+      
 

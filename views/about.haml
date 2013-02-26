@@ -1,23 +1,32 @@
 - @meta_title =  "Über uns - Hundetraining Teamarbeit"
 - @meta_description =  page.mission
 
-%h1.h1="Über uns und unsere Arbeit"
+%article.view
+  %header
+    %h1.h1="Über uns und unsere Arbeit"
+  
+  .leftcol.floatleft
+    %div
+      %strong.h3= nl2br(page.mission)
 
-.leftcol
-  %article
+  .rightcol.gradient_trans.floatright
+    
+    %h2.h3 Mehr über das Team 
+    %nav.sidebar
+      %ul
+        %li 
+          %a{ :href => url("/ueberuns/estherfollmann"), :title => "Esther Follmann, Hundeschule CaneAmi"} 
+            %b
+              &raquo; 
+            Esther Follmann
+        %li 
+          %a{ :href=> url("ueberuns/mirjamaulbach"), :title => "Mirjam Aulbach, Hundeschule CaveCani"} 
+            %b
+              &raquo; 
+            Mirjam Aulbach
+  .clear
 
-    %h3.h2.about= nl2br(page.mission)
-    %br
-
-.rightcol
-  %h2.h2 Mehr über das Team 
-  %ul
-    %li 
-      %a{ :href => url("/ueberuns/estherfollmann"), :title => "Esther Follmann, Hundeschule CaneAmi"} Esther Follmann
-    %li 
-      %a{ :href=> url("ueberuns/mirjamaulbach"), :title => "Mirjam Aulbach, Hundeschule CaveCani"} Mirjam Aulbach
-.clear
-= simple_format(page.description, :class => "description")
-%figure
-  %img{ :src => url("/images/esther_mirjam.jpg"), :alt => "Mirjam Aulbach, Hundeschule CaveCani und Esther Follmann, Hundeschule CaneAmi"}
-    %figcaption Mirjam Aulbach & Esther Follmann
+  = simple_format(page.description)
+  %figure
+    %img{ :src => url("/images/esther_mirjam.jpg"), :alt => "Mirjam Aulbach, Hundeschule CaveCani und Esther Follmann, Hundeschule CaneAmi"}
+    %figcaption Mirjam Aulbach und Esther Follmann

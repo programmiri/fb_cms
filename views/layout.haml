@@ -35,10 +35,10 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();    
-  %body.test
+  %body
     -# auch ein kommentar und ein test
     #container
-      %header
+      %header#mainheader
         %a#logo{:href => url("/"), :title => "Hundetraining Teamarbeit"}
           %img{:src => url("/images/logo_hundetraining_teamarbeit.png"), :alt => "Hundetraining Teamarbeit"}
         %nav#mainnav
@@ -55,14 +55,14 @@
               %a{:href => url("/kontakt"), :title => "Kontakt", } Kontakt
 
 
-      #content{ :role => "main" }
+      %section#content{ :role => "main" }
         = yield
         .clear
 
       %footer#mainfooter
-        .like_box.gradient_trans
+        .like_box
           :plain
-            <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F#{URI.escape(settings.facebook['fb_page_path'])}&amp;width=780&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23e2e2e2&amp;stream=false&amp;header=false&amp;height=258" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:780px; height:258px;" allowTransparency="true"></iframe>
+            <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F#{URI.escape(settings.facebook['fb_page_path'])}&amp;width=780&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23e5e5e5&amp;stream=false&amp;header=false&amp;height=258" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:780px; height:258px;" allowTransparency="true"></iframe>
 
         #infos_bottom
           .lefti.floatleft
