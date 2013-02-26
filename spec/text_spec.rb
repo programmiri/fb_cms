@@ -16,17 +16,36 @@ describe Text do
     end
   end
 
+  describe "linkify_feed" do
+    it "delete url from message, set link with name" do
+      linkify_feed("hi http://google.com ho", "Google Link").should eql("hi <a href=\"http://google.com\">&raquo;Google Link</a> ho")
+    end
+  end
+
+
+  describe "deletelink" do
+    it "remove an url in string" do
+      deletelink("hi http://google.com ho").should eql("hi ho")
+      deletelink("http://google.com ho").should eql("ho")
+      deletelink("hi http://google.com").should eql("hi")
+      deletelink("http://google.com").should eql("http://google.com")
+    end
+
+    it "remove nothing in a string without a url" do
+      linkify("hi google ho").should eql("hi google ho")
+    end
+  end
+
+  describe "headify" do
+    it "replaces a  specified character string with heading tags" do
+      headify("i really ~~love~~ google").should eql("i really <h3>love</h3> google")
+    end
+  end
+
+
   describe "simple_format" do
     it "wraps the given text in a paragrah" do
-      simple_format("hi").should eql("<p class=\"\">hi</p>")
-    end
-
-    it "adds a given class attribute to the paragraph" do
-      simple_format("hi", :class => "greeting").should eql("<p class=\"greeting\">hi</p>")
-    end
-
-    it "adds a given class attribute to the paragraph" do
-      simple_format("hi", :class => "greeting").should eql("<p class=\"greeting\">hi</p>")
+      simple_format("hi").should eql("<p>hi</p>")
     end
 
     it "inserts a br tag for a new line" do
@@ -36,7 +55,7 @@ describe Text do
       eos
       text.gsub!(/ +/, ' ')
 
-      simple_format(text).should eql("<p class=\"\"> Line 1\n<br /> Line 2\n</p>")
+      simple_format(text).should eql("<p>"" Line 1\n<br /> Line 2\n</p>")
     end
 
     it "starts a new paragraph at 2 new lines" do
@@ -47,7 +66,7 @@ describe Text do
       eos
       text.gsub!(/ +/, ' ')
 
-      simple_format(text).should eql("<p class=\"\"> Paragraph 1</p>\n\n<p class=\"\"> Paragraph 2\n</p>")
+      simple_format(text).should eql("<p> Paragraph 1</p>\n\n<p> Paragraph 2\n</p>")
     end
   end
 
@@ -56,5 +75,21 @@ describe Text do
       text = "This\nis a\ntest\n"
       nl2br(text).should eql("This\n<br />is a\n<br />test\n")
     end
+    it "adds br tags after 2 new lines" do
+      text = "This\n\nis a\n\ntest\n\n"
+      nl2br(text).should eql("This\n\n<br />is a\n\n<br />test\n\n")
+    end
   end
+
+  describe "nl2delete" do
+    it "delete new line in string" do
+      text = "This\nis a\ntest"
+      nl2delete(text).should eql("This is a test")
+    end
+    it "delete new lines in string" do
+      text = "This\n\nis a\n\ntest"
+      nl2delete(text).should eql("This is a test")
+    end
+  end
+
 end

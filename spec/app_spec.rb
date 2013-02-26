@@ -13,17 +13,42 @@ describe "fb_cms app" do
   end
 
   it "responds to /about" do
-    get '/about'
+    get '/ueberuns'
+    last_response.should be_ok
+  end
+
+  it "responds to /estherfollmann" do
+    get '/ueberuns/estherfollmann'
+    last_response.should be_ok
+  end
+
+  it "responds to /mirjamaulbach" do
+    get '/ueberuns/mirjamaulbach'
     last_response.should be_ok
   end
 
   it "responds to /events" do
-    get '/events'
+    get '/termine'
     last_response.should be_ok
   end
 
   it "responds to /albums" do
-    get '/albums'
+    get '/bilder'
+    last_response.should be_ok
+  end
+
+  it "responds to /contact" do
+    get '/kontakt'
+    last_response.should be_ok
+  end
+
+  it "responds to /album" do
+    get '/bilder'
+    last_response.should be_ok
+  end
+
+  it "responds to /event" do
+    get '/termine'
     last_response.should be_ok
   end
 
