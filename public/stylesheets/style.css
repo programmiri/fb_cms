@@ -242,7 +242,7 @@ body { font-family: Helvetica, "Helvetica Neue", Helvetica, Arial, sans-serif; t
 
 #container { width: 900px; height: 100%; min-height: 100%; height: auto !important; margin-top: 30px; margin-bottom: 20px; margin-left: auto; margin-right: auto; padding: 10px; text-align: left; background-color: #FCFCFC; box-shadow: 2px 2px 5px #888888; }
 
-header { height: 300px; background-image: url("/images/hundetraining-teamarbeit-header01.jpg"); border-bottom: 1px solid #ccc; }
+#mainheader { height: 300px; background-image: url("/images/hundetraining-teamarbeit-header01.jpg"); border-bottom: 1px solid #ccc; }
 
 /*bb wg. nav act */
 #logo { left: 25px; outline: medium none; position: relative; top: 105px; }
@@ -266,55 +266,42 @@ header { height: 300px; background-image: url("/images/hundetraining-teamarbeit-
 #content { clear: both; padding-top: 20px; padding-bottom: 20px; padding-left: 30px; padding-right: 20px; }
 
 /*ID für "Main" Footer statt allgemein footer */
-#mainfooter { margin-top: 100px; padding: 0 40px 20px; clear: both; }
+#mainfooter { margin-top: 50px; padding: 0 40px 20px; clear: both; }
 
-#infos_bottom { text-align: center; font-size: 77%; padding-top: 20px; margin-top: 70px; }
+#infos_bottom { text-align: center; font-size: 77%; margin-top: 70px; }
 
-/* Mehr oder minder allgemeines  
+/* Allgemeines / wird auf den meisten Seiten gebraucht  
 */
 a, a:visited, a:link, a:active { color: #6f9fa1; text-decoration: none; }
 
 a:hover { color: #6f9fa1; text-decoration: underline; }
 
+/* Klassen für Headlines */
 .h1 { font-family: "Kreon", "Helvetiva", "Arial", sans-serif; color: #999B3A; font-size: 450%; text-shadow: 1px 1px 1px #333333; font-weight: normal; letter-spacing: -1px; line-height: 1.2em; margin: 0.5em 0; clear: both; }
 
 .h2 { font-family: "Kreon", "Helvetiva", "Arial", sans-serif; font-size: 250%; font-style: normal; font-weight: normal; letter-spacing: -1px; line-height: 1.2em; margin: 0.5em 0; }
 
-.h2.about { font-size: 150%; }
-
 .h3 { font-family: "Kreon", "Helvetiva", "Arial", sans-serif; font-size: 150%; font-style: normal; font-weight: normal; letter-spacing: -1px; line-height: 1.2em; margin: 0.5em 0; }
 
-/*
-* Spezielleres
-*
-*/
+/* "Sidebar" (idR rightcol) */
+.sidebar ul { padding: 0 0 0 15px; }
+
+/* Cols für Layout */
 .leftcol { width: 540px; }
 
 .rightcol { width: 280px; margin-right: -30px; padding-right: 30px; padding-left: 20px; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; border-left: 1px solid #cbdc72; border-top: 1px solid #cbdc72; border-bottom: 1px solid #cbdc72; }
 
-/* PRÜFEN */
-.fb_feed p { min-height: 60px; font-size: 90%; padding-top: 5px; margin-bottom: 5px; margin-top: 8px; line-height: 1.15; }
+/* FB Like Box, kommt auf jeder Seite */
+.like_box { background: none repeat scroll 0 0 #e5e5e5; border-radius: 10px 10px 10px 10px; margin: 10px; padding: 10px 10px 0px 10px; }
 
-.fb_feed_date { background: #cbdc72; height: 62px; width: 62px; -webkit-border-radius: 300px 300px 300px 300px; -moz-border-radius: 300px 300px 300px 300px; border-radius: 300px 300px 300px 300px; float: left; margin-right: 10px; margin-left: -8px; margin-top: -2px; }
+/* Festlegung Layout für "normale" Bilder = 
+die, die groß eingefügt werden mit Untertitel 
+innerhalb von VIEWs */
+.view figure { width: 850px; text-align: center; }
 
-.published_at { font-size: 110%; font-weight: bold; color: #FFF; font-style: normal; font-weight: normal; letter-spacing: -1px; line-height: 90%; text-shadow: 1px 1px 1px #888; filter: dropshadow(color=#888888, offx=1, offy=1); }
+.view figure img { background: none repeat scroll 0 0 #fff; padding: 10px 10px 50px 10px; border: 1px solid #EEEEEE; box-shadow: 2px 2px 3px #e5e5e5; }
 
-.feed_day { float: left; padding-top: 18px; padding-left: 8px; padding-right: 2px; }
-
-.feed_month { padding-top: 18px; }
-
-.feed_year { padding-left: 16px; }
-
-.like_box { -moz-border-radius: 10px; -webkit-border-radius: 10px; -o-border-radius: 10px; -ms-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 10px; margin: 20px; }
-
-.facebook { height: 20px; min-height: 20px; height: auto !important; padding: 0 0 0 20px; line-height: 20px; }
-
-/* allgemeine def. image */
-figure { width: 850px; text-align: center; }
-
-figure img { background: none repeat scroll 0 0 #fff; padding: 10px 10px 50px 10px; border: 1px solid #EEEEEE; box-shadow: 2px 2px 3px #999999; }
-
-figcaption { color: #333; font-size: 0.8em; font-variant: small-caps; padding-bottom: 17px; margin-top: -35px; margin-bottom: 50px; }
+.view figcaption { color: #333; font-size: 0.8em; font-variant: small-caps; padding-bottom: 17px; margin-top: -35px; margin-bottom: 50px; }
 
 /*  Nützliche Klassen für diverses 
 */
@@ -331,60 +318,94 @@ figcaption { color: #333; font-size: 0.8em; font-variant: small-caps; padding-bo
 /* Verlauf grau zu transparent */
 .gradient_trans { background: #e5e5e5; /* Old browsers */ background: -moz-linear-gradient(left, #e5e5e5 0%, white 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, #e5e5e5), color-stop(100%, white)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, #e5e5e5 0%, white 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, #e5e5e5 0%, white 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, #e5e5e5 0%, white 100%); /* IE10+ */ background: linear-gradient(to right, #e5e5e5 0%, #ffffff 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */ }
 
+.gradient_transverti { background: -moz-linear-gradient(top, rgba(229, 229, 229, 0.65) 0%, rgba(229, 229, 229, 0) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(229, 229, 229, 0.65)), color-stop(100%, rgba(229, 229, 229, 0))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(top, rgba(229, 229, 229, 0.65) 0%, rgba(229, 229, 229, 0) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(top, rgba(229, 229, 229, 0.65) 0%, rgba(229, 229, 229, 0) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(top, rgba(229, 229, 229, 0.65) 0%, rgba(229, 229, 229, 0) 100%); /* IE10+ */ background: linear-gradient(to bottom, rgba(229, 229, 229, 0.65) 0%, rgba(229, 229, 229, 0) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6e5e5e5', endColorstr='#00e5e5e5',GradientType=0 ); /* IE6-9 */ }
+
 /*
-* CSS Angaben für album + albums
+* CSS Angaben für Startseite inkl. FB Feed
 *
 */
+/* Logos auf Startseite */
+.logos { width: 320px; background: none repeat scroll 0 0 #fff; padding: 5px 5px 5px 5px; border: 1px solid #EEEEEE; box-shadow: 2px 2px 3px #e5e5e5; }
+
+.logos img { padding: 0; margin: 0; box-shadow: none; border: none; }
+
+/* PRÜFEN */
+.fb_feed p { font-size: 90%; line-height: 1.15; min-height: 60px; padding-top: 3px; margin-bottom: 5px; margin-top: 20px; }
+
+.fb_feed_date { font-size: 12px; font-weight: bold; color: white; line-height: 100%; font-style: normal; font-weight: normal; letter-spacing: -1px; height: 44px; width: 44px; margin-right: 8px; margin-left: -10px; background: #cbdc72; -webkit-border-radius: 300px 300px 300px 300px; -moz-border-radius: 300px 300px 300px 300px; border-radius: 300px 300px 300px 300px; border: 2px solid white; box-shadow: 1px 0px 2px #e5e5e5; }
+
+.feed_day_month { padding-top: 11px; padding-left: 5px; }
+
+.feed_year { padding-left: 11px; }
+
+.fb_feed hr { border: 0; height: 1px; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: -15px; background: -moz-linear-gradient(left, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(153, 153, 153, 0.65)), color-stop(100%, rgba(0, 0, 0, 0))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* IE10+ */ background: linear-gradient(to right, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6999999', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */ }
+
+img.postpicture { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 1px; background-color: #cbdc72; max-width: 70px; height: auto; margin-right: -20px; }
+
+/* 
+* Bildergallerie Starseite
+*/
+#startgallery { margin-top: 70px; }
+
+#startgallery p { font-size: 80%; text-align: center; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding-bottom: 100px; margin-right: 25px; margin-bottom: -60px; }
+
+#startgallery .minih2 { font-size: 180%; }
+
+#startgallery ul { list-style: none outside none; margin: 0; padding: 0; background-color: #333333; }
+
+#startgallery li { float: left; margin-right: 15px; margin-bottom: 15px; }
+
+#startgallery .cover { width: 250px; height: 167px; background-position: center center; background-repeat: no-repeat; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; filter: alpha(opacity=80); opacity: 0.8; }
+
+#startgallery .cover:hover { filter: alpha(opacity=100); opacity: 1; }
+
+#startgallery a.img_wrap { display: block; }
+
+/*CHRISTIAN FRAGEN da import oder oben? */
+/*
+* CSS Angaben für Alben + Einzelansicht Alben
+*
+*/
+/* Album */
+#albums { list-style: none; margin: 0; padding: 0; }
+
+#albums li { margin-bottom: 80px; }
+
+#albumcov { position: absolute; }
+
+#albumcov a.wrap { position: absolute; display: block; width: 500px; padding: 8px; background: white; border: 1px solid #e5e5e5; box-shadow: 2px 2px 3px #e5e5e5; -moz-box-shadow: 2px 2px 3px #e5e5e5; -webkit-box-shadow: 2px 2px 3px #e5e5e5; z-index: 3; }
+
+#albumcov .stack1 { position: relative; width: 518px; height: 328px; background: white; border: 1px solid #e5e5e5; box-shadow: 2px 2px 3px #e5e5e5; -moz-box-shadow: 2px 2px 3px #e5e5e5; -webkit-box-shadow: 2px 2px 3px #e5e5e5; z-index: 2; transform: rotate(6deg); -ms-transform: rotate(6deg); /* IE 9 */ -webkit-transform: rotate(6deg); /* Safari and Chrome */ -o-transform: rotate(6deg); /* Opera */ -moz-transform: rotate(6deg); /* Firefox */ }
+
+#albumcov .stack2 { position: relative; width: 518px; height: 328px; margin-left: -5px; margin-top: -5px; background: white; border: 1px solid #e5e5e5; box-shadow: 2px 2px 3px #e5e5e5; -moz-box-shadow: 2px 2px 3px #e5e5e5; -webkit-box-shadow: 2px 2px 3px #e5e5e5; z-index: 1; transform: rotate(-3deg); -ms-transform: rotate(-3deg); /* IE 9 */ -webkit-transform: rotate(-3deg); /* Safari and Chrome */ -o-transform: rotate(-3deg); /* Opera */ -moz-transform: rotate(-3deg); /* Firefox */ }
+
+#albums h2 { margin-top: 0px; margin-bottom: 0px; }
+
+#albumcov a.wrap:hover { margin-left: 1px; margin-top: 1px; border: 1px solid #e5e5e5; }
+
+#albums .acover { width: 500px; height: 310px; background-position: center center; background-repeat: no-repeat; }
+
+.albuminfo { width: 280px; height: 310px; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; padding: 10px; font-size: 90%; }
+
+.albumdates { font-size: 80%; font-variant: small-caps; margin-top: 0px; margin-bottom: 5px; }
+
+/* Einzelansicht */
 #images { list-style: none; margin: 0; padding: 0; }
 
-#images li { width: 240px; height: 200px; float: left; margin: 10px; }
+#images li { width: 350px; height: 213px; float: left; margin: 30px; }
 
-#images a.img_wrap { display: block; width: 180px; padding: 4px; background: white; border: 1px solid #999999; }
+#images a.img_wrap { display: block; width: 320px; padding: 8px; background: white; border: 1px solid #e5e5e5; box-shadow: 2px 2px 3px #e5e5e5; -moz-box-shadow: 2px 2px 3px #e5e5e5; -webkit-box-shadow: 2px 2px 3px #e5e5e5; }
 
-#images a.img_wrap:hover { border: 1px solid #fcfcfc; }
+#images a.img_wrap:hover { border: 1px solid #cbdc72; }
 
 #images a.title { display: block; font-size: 15px; font-weight: bold; line-height: 18px; margin: 5px; }
 
-.cover { width: 180px; height: 120px; background-position: center center; background-repeat: no-repeat; }
+#images .cover { width: 320px; height: 213px; background-position: center center; background-repeat: no-repeat; }
 
 /*
 * CSS Angaben für event und events
 *
 */
-#events { list-style: none; margin: 0; padding: 0; }
-
-.single_event { background: white; color: #333333; margin: 10px; padding: 20px; -moz-border-radius: 10px; -webkit-border-radius: 10px; -o-border-radius: 10px; -ms-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 10px; overflow: hidden; *zoom: 1; }
-
-.single_event h2 { margin: 0 0 10px 0; line-height: 1em; font-size: 200%; }
-
-.single_event h2 a { color: #333333; }
-.single_event h2 a:visited { color: #333333; }
-.single_event h2 a:focus { color: #999999; }
-.single_event h2 a:hover { color: #999999; }
-.single_event h2 a:active { color: #333333; }
-
-.col_l { float: left; width: 80px; }
-
-.col_r { float: left; width: 500px; }
-
-.cal_month { -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; -o-border-top-left-radius: 5px; -ms-border-top-left-radius: 5px; -khtml-border-top-left-radius: 5px; border-top-left-radius: 5px; -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; -o-border-top-right-radius: 5px; -ms-border-top-right-radius: 5px; -khtml-border-top-right-radius: 5px; border-top-right-radius: 5px; width: 60px; background: #999b3a; color: #fff; text-transform: uppercase; text-align: center; font-size: 16px; font-weight: bold; padding: 3px 0 1px; }
-
-.cal_day { -moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px; -o-border-bottom-left-radius: 5px; -ms-border-bottom-left-radius: 5px; -khtml-border-bottom-left-radius: 5px; border-bottom-left-radius: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; -o-border-bottom-right-radius: 5px; -ms-border-bottom-right-radius: 5px; -khtml-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px; width: 60px; background: #fff; color: #333333; text-align: center; font-size: 36px; font-weight: bold; padding: 5px 0; }
-
-.cal_year { -moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px; -o-border-bottom-left-radius: 5px; -ms-border-bottom-left-radius: 5px; -khtml-border-bottom-left-radius: 5px; border-bottom-left-radius: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; -o-border-bottom-right-radius: 5px; -ms-border-bottom-right-radius: 5px; -khtml-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px; width: 60px; background: #999b3a; color: #fff; text-transform: uppercase; text-align: center; font-size: 16px; font-weight: bold; padding: 3px 0 1px; }
-
-p.location { margin: 0 0 10px; }
-
-.location strong { font-size: 120%; }
-
-span.region, span.country { display: none; }
-
-time { margin: 0 0 10px; }
-
-#attendees { list-style: none; margin: 0; padding: 0; }
-
-#attendees li { float: left; margin: 0; }
-
 /* FancyBox - jQuery Plugin Simple and fancy lightbox alternative  Examples and documentation at: http://fancybox.net  Copyright (c) 2008 - 2010 Janis Skarnelis That said, it is hardly a one-person project. Many people have submitted bugs, code, and offered their advice freely. Their support is greatly appreciated.  Version: 1.3.4 (11/11/2010) Requires: jQuery v1.3+  Dual licensed under the MIT and GPL licenses: http://www.opensource.org/licenses/mit-license.php http://www.gnu.org/licenses/gpl.html */
 #fancybox-loading { position: fixed; top: 50%; left: 50%; width: 40px; height: 40px; margin-top: -20px; margin-left: -20px; cursor: pointer; overflow: hidden; z-index: 1104; display: none; }
 
