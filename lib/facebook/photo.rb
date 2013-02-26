@@ -1,11 +1,11 @@
 class Facebook::Photo < Facebook::GraphObject
 
   def thumb
-    data["picture"].sub("_s.jpg", "_a.jpg")
+     data["images"][5]["source"]
   end
 
   def url
-    data["picture"].sub("_s.jpg", "_n.jpg")
+    data["source"]
   end
 
 end
