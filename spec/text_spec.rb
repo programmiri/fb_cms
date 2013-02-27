@@ -42,7 +42,6 @@ describe Text do
     end
   end
 
-
   describe "simple_format" do
     it "wraps the given text in a paragrah" do
       simple_format("hi").should eql("<p>hi</p>")
@@ -65,7 +64,6 @@ describe Text do
         Paragraph 2
       eos
       text.gsub!(/ +/, ' ')
-
       simple_format(text).should eql("<p> Paragraph 1</p>\n\n<p> Paragraph 2\n</p>")
     end
   end
@@ -91,5 +89,4 @@ describe Text do
       nl2delete(text).should eql("This is a test")
     end
   end
-
 end
