@@ -15,9 +15,10 @@
 
     %meta{ :property => "og:title", :content => @meta_title }
     %meta{ :property => "og:description", :content => @meta_description }
-    %meta{ :property => "og:language", :content => "de" }
-    %meta{ :property => "og:site_name", :content => "fb_cms" }
-    %meta{ :property => "og:type", :content => "non_profit" }
+    %meta{ :property => "og:type", :content => "website" }
+    %meta{ :property => "og:url", :content => "#{request.url}"}  
+    %meta{ :property => "og:locale", :content => "DE_de" }
+    %meta{ :property => "og:site_name", :content => "Hundetraining Teamarbeit" }
     %meta{ :property => "og:image", :content => "#{settings.site_url}/apple-touch-icon-114x114-precomposed.png" }
     %meta{ :property => "fb:admins", :content => settings.facebook['admin_id'] }
 
