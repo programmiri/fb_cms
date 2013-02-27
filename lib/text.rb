@@ -26,7 +26,6 @@ module Text
     text.dup[0..(max_length-postfix.size)] + postfix
   end
 
-
   # elegant ist anders - was solls
   # entfernt Link aus String für ALT / TITLE Newsfeed 
   # verwendet in index.haml
