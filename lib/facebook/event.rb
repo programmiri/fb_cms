@@ -2,25 +2,24 @@ class Facebook::Event < Facebook::GraphObject
 
   attr_accessor :attending
 
+  # data["location"] ist rein REINER string! 
+  def location
+    data["location"]
+  end
+  
+  # venue beinhaltet daten wenn ein konkreter ort angegeben werden konnte
+
+  def path
+    "termine/#{id}/#{name.parameterize}"
+  end
+
   def description
     data["description"]
   end
   
   def summary
-    description[0..200] + "..."
-  end
-
-  def address
-    {}.merge({ "venue" => data["venue"]}).merge("location" => location)
-  end
-
-  def location
-    data["location"]
-  end
-  
-  def path
-    "termine/#{id}/#{name.parameterize}"
-  end
+    description[0..160] + "&nbsp;(...)&nbsp<a href=" + "termine/#{id}/#{name.parameterize}" + ">&raquo mehr lesen</a>"
+  end 
 
   def start
     Time.zone.parse(data["start_time"])
@@ -34,8 +33,6 @@ class Facebook::Event < Facebook::GraphObject
     I18n.l(send(d), :format => :starting)
   end
   
-
-
   class << self
 
     def find(id)
