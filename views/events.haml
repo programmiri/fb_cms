@@ -38,32 +38,9 @@
               %img{ :src=> "http://graph.facebook.com/#{event.id}/picture?type=normal", :alt => "Seminar #{event.name}" }
           %div{ :itemprop => "description" }
             = simple_format(linkify(event.summary))
-        %meta{ :itemprop => "performers", :itemscope => "itemscope", :itemtype => "http://schema.org/Event", :itemtype => "http://schema.org/Person" }
-          %meta{ :itemprop => "name", :content=> "Mirjam Aulbach"}
-          %meta{ :itemprop => "description", :content => "Mirjam Aulbach leitet seit 2008 Hundetraining Cave Cani in Babenhausen (Hessen), Kreis Darmstadt/Dieburg / Aschaffenburg. Sie ist seit 2009 geprüfte CumCane®-Trainerin und Mitglied beim Internationaler Berufsverband der Hundetrainer/innen (IBH) e.V."}
-          %meta{ :itemprop => "url", :content => "http://cavecani.de"}
-          %meta{ :itemprop => "image", :content => "http://hundetraining-teamarbeit.de/mirjam_aulbach_cavecani.jpg"}
-          %meta{ :itemprop => "address", :itemscope => "itemscope", :itemtype => "http://schema.org/PostalAddress"}
-            %meta{ :itemprop => "addressCountry", :content => "Deutschland"}              
-            %meta{ :itemprop => "addressRegion", :content => "Hessen" }
-            %meta{ :itemprop => "addressLocality", :content => "Babenhausen" }
-            %meta{ :itemprop => "postalCode", :content => "64832" }
-            %meta{ :itemprop => "streetAddress", :content => "Hinter der Altdörfer Kirche 30a" }
-          %meta{ :itemprop => "affiliation", :itemscope => "itemscope", :itemtype => "http://schema.org/Organization"}
-            %meta{ :itemprop => "name", :content => "CaveCani - menschen.hunde.lernen" }
-            %meta{ :itemprop => "url", :content => "http://cavecani.de" }
-            %meta{ :itemprop => "description", :content => "Hundeschule und Hundetraining in Babenhausen (Hessen), Kreis Darmstadt-Dieburg, Aschaffenburg." }
-        %meta{ :itemprop => "performers", :itemscope => "itemscope", :itemtype => "http://schema.org/Event", :itemtype => "http://schema.org/Person" }
-          %meta{ :itemprop => "name", :content=> "Esther Follmann"}
-          %meta{ :itemprop => "description", :content => "Esther Follmann ist staatlich anerkannte Physiotherapeutin und leitet seit 2003 die eigene Hundeschule /Kynopraxis (Verhaltensberatung) CaneAmi in Neustadt/Wstr. Seit Mai 2005 geprüfte CumCane®-Trainerin und Mitglied beim Internationaler Berufsverband der Hundetrainer/innen (IBH) e.V. "}
-          %meta{ :itemprop => "url", :content => "http://caneami.de"}
-          %meta{ :itemprop => "image", :content => "http://hundetraining-teamarbeit.de/esther_follmann_caneami.jpg"}
-          %meta{ :itemprop => "address", :itemscope => "itemscope", :itemtype => "http://schema.org/PostalAddress"}
-            %meta{ :itemprop => "addressCountry", :content => "Deutschland"}              
-            %meta{ :itemprop => "addressRegion", :content => "Rheinland-Pfalz" }
-            %meta{ :itemprop => "addressLocality", :content => "Neustadt an der Weinstrasse" }
-            %meta{ :itemprop => "postalCode", :content => "67435" }
-            %meta{ :itemprop => "streetAddress", :content => "Mühlbachstr. 7" }
-          %meta{ :itemprop => "affiliation", :itemscope => "itemscope", :itemtype => "http://schema.org/Organization"}
-            %meta{ :itemprop => "name", :content => "Hundeschule CaneAmi" }
-            %meta{ :itemprop => "url", :content => "http://caneami.de" }
+        Seminar mit
+        %span{ :itemprop => "performers"}
+          Esther Follmann 
+        und
+        %span{ :itemprop => "performers"}
+          Mirjam Aulbach
