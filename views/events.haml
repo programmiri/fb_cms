@@ -38,9 +38,13 @@
               %img{ :src=> "http://graph.facebook.com/#{event.id}/picture?type=normal", :alt => "Seminar #{event.name}" }
           %div{ :itemprop => "description" }
             = simple_format(linkify(event.summary))
-        Seminar mit
-        %span{ :itemprop => "performers"}
-          Esther Follmann 
-        und
-        %span{ :itemprop => "performers"}
-          Mirjam Aulbach
+          Seminar mit
+          %span{ :itemprop => "performers"}
+            Esther Follmann 
+          und
+          %span{ :itemprop => "performers" }
+            %span{ :itemprob => "name", :itemscope => "itemscope", :itemtype => "http://schema.org/Person"} 
+              Mirjam Aulbach
+              %meta{ :itemprop => "description", :content => "Mirjam Aulbach leitet seit 2008 Hundetraining Cave Cani in Babenhausen (Hessen), Kreis Darmstadt/Dieburg / Aschaffenburg. Sie ist seit 2009 geprüfte CumCane®-Trainerin und Mitglied beim Internationaler Berufsverband der Hundetrainer/innen (IBH) e.V."}
+              %meta{ :itemprop => "url", :content => "http://cavecani.de"}
+              %meta{ :itemprop => "image", :content => "http://hundetraining-teamarbeit.de/mirjam_aulbach_cavecani.jpg"}
