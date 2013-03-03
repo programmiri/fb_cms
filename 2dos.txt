@@ -1,0 +1,55 @@
+2dos
+
+// Methode String nicht nach 120 ZEICHEN sondern 10 WÖRTERN abzuschneiden
+  Text.rb -> summary, summary meta ...- müsste es irgendeine Regex geben
+
+// beim dummen headify werden (logischerweise) leere <p> ausgegeben. 
+   Lösung dafür (Kombi headify + simple_format)
+
+// text.rb - Markierung aus String entfernen @[zahl.zahl name] (so oder ähnlich - nachsehen) 
+    betrifft albums (albums auch? nee?) + feed (falls ma seite markiert wird)
+
+// css aufräumen -.- mega facepalm
+
+// irgendwann u.U. google + Seite anlegen und publisher infos mit rein. ma sehen
+
+// album + albums seo überarbeiten
+
+// microdata event, events, album, albums überarbeiten
+
+// index.haml - startgallery alt / title verbessern 
+
+
+
+//  Open Graph Angaben genauer
+
+// Open Graph Bild!
+
+// breadcrumb navi
+
+// Microdate Organization für _single_event ergänzen
+
+// -> Veranstater genauere Daten aus String holen für Microdata falls möglich
+
+// Facebook - VENUE rausholen. 
+   Venue gibt eine ID aus, kein Array (zumindest nicht beim Test mit Bachwiesenschule, laut doc ja schon, nee is klar) 
+   
+  def address
+    {}.merge({ "venue" => data["venue"]}).merge("location" => location)
+  end
+
+  whyyyyyyy??
+
+           %a{ :href => url(event.path), :itemprop => "url", :title=> event.name }
+              %span{ :itemprop => "summary" }= event.name
+          %p.location{ :itemprop => "address", :itemscope => "itemscope", :itemtype => "http://data-vocabulary.org/Address" }
+            %strong
+              = event.location
+            - if event.address["street"] && event.address["city"]
+              = "("
+              %span.street{ :itemprop => "street-address" }>= event.address["street"]
+              = ",&nbsp;" if event.address["street"]
+              %span.city{ :itemprop => "locality" }>= event.address["city"]\
+              = ")"
+            %span.region{ :itemprop => "region" }= event.address["state"]
+            %span.country{ :itemprop => "country-name" }= event.address["country"]
