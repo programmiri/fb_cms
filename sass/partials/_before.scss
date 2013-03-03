@@ -20,8 +20,8 @@ textarea {
 }
 
 body {
-    font-size: 1em;
-    line-height: 1.4;
+  font-size: 1em;
+  line-height: 1.4;
 }
 
 /*
@@ -591,17 +591,22 @@ sub {
 
 /**
  * Address margins set differently in IE 6/7.
+ * -> geändert zu html5bp -> 
+ * margin + paddings ,listen alle auf 0
+ * style raus, image raus
+ * zum größten teil wirds eh ohne genutzt!
  */
 
 dl,
 menu,
 ol,
 ul {
-    margin: 1em 0;
+list-style: none;
+list-style-image: none;
 }
 
 dd {
-    margin: 0 0 0 40px;
+  margin: 0;
 }
 
 /**
@@ -611,7 +616,7 @@ dd {
 menu,
 ol,
 ul {
-    padding: 0 0 0 40px;
+padding: 0;
 }
 
 /**
@@ -620,8 +625,8 @@ ul {
 
 nav ul,
 nav ol {
-    list-style: none;
-    list-style-image: none;
+  list-style: none;
+  list-style-image: none;
 }
 
 /* ==========================================================================
