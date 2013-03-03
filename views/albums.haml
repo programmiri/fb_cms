@@ -32,5 +32,5 @@
 
         -if album.description
           %p
-            = nl2br(linkify truncate(album.description, 410))
+            = nl2br(linkify_short truncate(album.description, 410))
       .clear

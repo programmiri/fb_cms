@@ -119,9 +119,13 @@
         - if post.data["name"]
           %p= linkify_feed(post.message, post.name)
         - else
-          %p= nl2br(linkify post.message)
+          %p= nl2br(linkify_short(post.message))
         .clear
         %hr
     %p
-      dasadas
+      %small
+        Mehr auf unserer Facebook Seite: 
+        %br
+        %a{ :href=> "http://facebook.com/hundetrainingteamarbeit.de", :title => "Hundetraining Teamarbeit bei Facebook"}
+          Hundetraining Teamarbeit bei Facebook
     %clear
