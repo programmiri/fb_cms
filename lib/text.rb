@@ -5,8 +5,18 @@ module Text
     text = text.to_s.dup
     generic_URL = Regexp.new('(^|[\n ])([\w]+?://[\w]+[^ \"\n\r\t<]*)', Regexp::MULTILINE | Regexp::IGNORECASE)
     starts_with_www = Regexp.new('(^|[\n ])((www)\.[^ \"\t\n\r<]*)', Regexp::MULTILINE | Regexp::IGNORECASE)
-    text.gsub!(generic_URL, '\1<a href="\2">\2</a>')
+    #text.gsub!(generic_URL, '\1<a href="\2">\2</a>')
+    text.gsub!(generic_URL) { $1 + '<a href="\2">\2</a>' }
     text.gsub!(starts_with_www, '\1<a href="http://\2">\2</a>')
+    text
+  end
+
+  def linkify_short(text)
+    text = text.to_s.dup
+    generic_URL = Regexp.new('(^|[\n ])([\w]+?://[\w]+[^ \"\n\r\t<]*)', Regexp::MULTILINE | Regexp::IGNORECASE)
+    starts_with_www = Regexp.new('(^|[\n ])((www)\.[^ \"\t\n\r<]*)', Regexp::MULTILINE | Regexp::IGNORECASE)
+    text.gsub!(generic_URL) { $1 + '<a href="' + $2 + '">' + truncate($2, 40) + '</a>' }
+    text.gsub!(starts_with_www) { $1 + '<a href="http://' + $2 + '">' + truncate($2) + '</a>' }
     text
   end
 
@@ -50,7 +60,6 @@ module Text
     text.insert 0, start_tag
     text << "</p>"
   end
-
 
   # ergänzt, 2 /n geben ebenfalls einen BR
   # Verwendung nur für Newsfeedausgabe index.haml
