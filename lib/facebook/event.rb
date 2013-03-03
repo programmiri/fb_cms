@@ -18,7 +18,11 @@ class Facebook::Event < Facebook::GraphObject
   end
   
   def summary
-    description[0..160] + "&nbsp;(...)&nbsp<a href=" + "termine/#{id}/#{name.parameterize}" + ">&raquo mehr lesen</a>"
+    description[0..300] + "&nbsp;(...)&nbsp<a href=" + "termine/#{id}/#{name.parameterize}" + ">&raquo mehr lesen</a>"
+  end 
+
+  def summarymeta
+    description[0..120] + "(...)"
   end 
 
   def start

@@ -1,33 +1,69 @@
+/ Abfrage - Event oder Events? 
+- if locals[:standalone] 
+  - styleclass = "single_event"
+- else
+  - styleclass = "sum_event"
+
 - tag = locals[:standalone] ? "div" : "li"
-- haml_tag("#{tag}.single_event", { :itemscope => "itemscope", :itemtype => "http://data-vocabulary.org/Event" }) do
-  .col_l
-    .cal
-      .cal_month= I18n.l(event.start, :format => "%b")
-      .cal_day= I18n.l(event.start, :format => "%d")
+- haml_tag("#{tag}.#{styleclass}", { :itemscope => "itemscope", :itemtype => "http://schema.org/Event" }) do
+  - unless locals[:standalone] 
+    .event_circle.floatleft
+      .cal_day
+        = I18n.l(event.start, :format => "%d.")
+        - if event.end_time
+          =I18n.l(event.end_time, :format => "-&nbsp;%d.")
+      .cal_month September
+      //.cal_month= I18n.l(event.start, :format => "%B")
       .cal_year= I18n.l(event.start, :format => "%Y")
-  .col_r
-    - unless locals[:standalone]
-      %h2
+  %div{ :class => "#{styleclass} event_infos" }
+    - if locals[:standalone] 
+      %div{ :class => "event_circle floatright centered #{styleclass}" }
+        %a{:href =>"http://facebook.com/events/#{event.id}", :title=>event.name}
+          &raquo; Termin bei Facebook ansehen
+    -else
+      %h2{ :class => "#{styleclass}" }
+        %span.blueraquo &raquo;
         %a{ :href => url(event.path), :itemprop => "url", :title=> event.name }
-          %span{ :itemprop => "summary" }= event.name
-    %p.location{ :itemprop => "address", :itemscope => "itemscope", :itemtype => "http://data-vocabulary.org/Address" }
-      %strong
-        = event.address["location"]
-      - if event.address["street"] && event.address["city"]
-        = "("
-        %span.street{ :itemprop => "street-address" }>= event.address["street"]
-        = ",&nbsp;" if event.address["street"]
-        %span.city{ :itemprop => "locality" }>= event.address["city"]\
-        = ")"
-      %span.region{ :itemprop => "region" }= event.address["state"]
-      %span.country{ :itemprop => "country-name" }= event.address["country"]
-    %time{ :itemprop => "startDate", :datetime => event.start.iso8601 }
-      = event.date
-    - if event.end_time
-      bis
-      %time{ :itemprop => "endDate", :datetime => event.end_time.iso8601 }
-        = event.date(:end_time)
-    %p{ :itemprop => "description" }
-      = simple_format(linkify(locals[:standalone] ? event.description : event.summary))
-    %p 
-      %a{:href=>"http://facebook.com/events/#{event.id}", :title=>event.name} Veranstaltung auf Facebook
+          %span{ :itemprop => "name" }= event.name
+    %div{ :class => "event_info_box1" }
+      %p{ :itemprop => "location", :itemscope => "itemscope", :itemtype => "http://schema.org/Place", :class => "location #{styleclass} icons" }
+        %strong{ :itemprop => "name"}
+          = event.location
+      %div{ :class => "event_date #{styleclass} icons"}
+        %time{ :itemprop => "startDate", :datetime => event.start.iso8601 }
+          = event.date
+        - if event.end_time
+          bis
+          %time{ :itemprop => "endDate", :datetime => event.end_time.iso8601 }
+            = event.date(:end_time)
+    %div{ :class => "eventdesc #{styleclass}"}
+      %p.floatleft.eventpic
+        - if locals[:standalone]
+          %meta{:itemprop => "image", :content => "http://graph.facebook.com/#{event.id}/picture?type=normal"}
+          %img{ :src=> "http://graph.facebook.com/#{event.id}/picture?type=large", :alt => "Seminar #{event.name}" }
+        - else
+          %meta{:itemprop => "image", :content => "http://graph.facebook.com/#{event.id}/picture?type=normal"}
+          %img{ :src=> "http://graph.facebook.com/#{event.id}/picture?type=normal", :alt => "Seminar #{event.name}" }
+      - if locals[:standalone]
+        = simple_format(headify(linkify(event.description)))     
+      - else
+        = simple_format(linkify(event.summary))
+
+    // unfein, aber das leben ist kein ponyhof
+    // Hidden, Infos Microdata
+    // 2do: Organisation noch mit rein
+    %span.hide{ :itemprop => "performers", :itemscope => "itemscope", :itemtype => "http://schema.org/Person" }
+      %span.hide{ :itemprop => "name"}
+        Esther Follmann
+      %meta{ :itemprop => "description", :content => "Esther Follmann ist staatlich anerkannte Physiotherapeutin und leitet seit 2003 die eigene Hundeschule /Kynopraxis (Verhaltensberatung) CaneAmi in Neustadt/Wstr. Seit Mai 2005 geprüfte CumCane®-Trainerin und Mitglied beim Internationaler Berufsverband der Hundetrainer/innen (IBH) e.V."}
+      %meta{ :itemprop => "url", :content => "http://caneami.de"}
+      %meta{ :itemprop => "image", :content => "http://hundetraining-teamarbeit.de/esther_follmann_caneami.jpg"}
+
+    %span.hide{ :itemprop => "performers", :itemscope => "itemscope", :itemtype => "http://schema.org/Person" }
+      %span.hide{ :itemprop => "name"}
+        Mirjam Aulbach
+        %a{ :href => "https://plus.google.com/u/0/113423687844305630467?rel=author" }
+          Google
+      %meta{ :itemprop => "description", :content => "Mirjam Aulbach leitet seit 2008 Hundetraining Cave Cani in Babenhausen (Hessen), Kreis Darmstadt/Dieburg / Aschaffenburg. Sie ist seit 2009 geprüfte CumCane®-Trainerin und Mitglied beim Internationaler Berufsverband der Hundetrainer/innen (IBH) e.V."}
+      %meta{ :itemprop => "url", :content => "http://cavecani.de"}
+      %meta{ :itemprop => "image", :content => "http://hundetraining-teamarbeit.de/mirjam_aulbach_cavecani.jpg"}

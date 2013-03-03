@@ -1,50 +1,10 @@
-- @meta_title = "Seminare, Workshops & mehr"
-- @meta_description = "Unsere aktuellen Veranstaltungen in der Übersicht"
-
-%h2.h1 Seminare & Workshops
+- @meta_title = "Seminare, Workshops & mehr - Hundetraining Teamarbeit"
+- @meta_description = "Rund um den Hund: Unsere aktuellen Seminare und Workshops in der Übersicht."
 
 %article
+  %h1.h1 Seminare & Workshops
   %p 
     Hier findet sich eine Übersicht über unsere aktuellen Veranstaltungen: 
   %ol
     - events.each do |event|
-      
-      %li{ :itemscope => "itemscope", :itemtype => "http://schema.org/Event" }
-        .col_l 
-          .cal_day
-            = I18n.l(event.start, :format => "%d.")
-            - if event.end_time
-              =I18n.l(event.end_time, :format => "-&nbsp;%d.")
-          .cal_month September
-          //.cal_month= I18n.l(event.start, :format => "%B")
-          .cal_year= I18n.l(event.start, :format => "%Y")
-        .col_r
-          %h2
-            %span.blueraquo &raquo;
-            %a{ :href => url(event.path), :itemprop => "url", :title=> event.name }
-              %span{ :itemprop => "name" }= event.name
-          %p.location{ :itemprop => "location", :itemscope => "itemscope", :itemtype => "http://schema.org/Place" }
-            %strong{ :itemprop => "name"}
-              = event.location
-          %div.eventtime
-            %time{ :itemprop => "startDate", :datetime => event.start.iso8601, :class => "event_date" }
-              = event.date
-            - if event.end_time
-              bis
-              %time{ :itemprop => "endDate", :datetime => event.end_time.iso8601 }
-                = event.date(:end_time)
-            %p.floatleft.eventpic
-              %meta{:itemprop => "image", :content => "http://graph.facebook.com/#{event.id}/picture?type=normal"}
-              %img{ :src=> "http://graph.facebook.com/#{event.id}/picture?type=normal", :alt => "Seminar #{event.name}" }
-          %div{ :itemprop => "description" }
-            = simple_format(linkify(event.summary))
-          Seminar mit
-          %span{ :itemprop => "performers"}
-            Esther Follmann 
-          und
-          %span{ :itemprop => "performers", :itemscope => "itemscope", :itemtype => "http://schema.org/Person" }
-            %span{ :itemprop => "name"}
-              Mirjam Aulbach
-            %meta{ :itemprop => "description", :content => "Mirjam Aulbach leitet seit 2008 Hundetraining Cave Cani in Babenhausen (Hessen), Kreis Darmstadt/Dieburg / Aschaffenburg. Sie ist seit 2009 geprüfte CumCane®-Trainerin und Mitglied beim Internationaler Berufsverband der Hundetrainer/innen (IBH) e.V."}
-            %meta{ :itemprop => "url", :content => "http://cavecani.de"}
-            %meta{ :itemprop => "image", :content => "http://hundetraining-teamarbeit.de/mirjam_aulbach_cavecani.jpg"}
+      = haml(:_single_event, :layout => false, :locals => { :event => event, :standalone => false })
