@@ -15,11 +15,11 @@
   margin-bottom: 80px;
 }
 
-#albumcov {
+.albumcov {
   position: absolute;
 }
 
-#albumcov a.wrap {
+.albumcov a.wrap {
   position: absolute;
   display: block;
   width: 500px;
@@ -32,7 +32,7 @@
   z-index: 3;
 }
 
-#albumcov .stack1 {
+.stack1 {
   position: relative;
   width: 518px;
   height: 328px;
@@ -49,7 +49,7 @@
   -moz-transform: rotate(6deg); /* Firefox */
 }
 
-#albumcov .stack2 {
+.stack2 {
   position: relative;
   width: 518px;
   height: 328px;
@@ -77,14 +77,12 @@ margin-bottom: 0px;
 
 
 
-#albumcov a.wrap:hover {
-  margin-left: 1px;
-  margin-top: 1px;
-  border: 1px solid $light_grey;
+.albumcov a.wrap:hover {
+  border: 1px solid $light_green;
 }
 
 
-#albums .acover {
+.acover {
   width: 500px;
   height: 310px;
   background-position: center center;

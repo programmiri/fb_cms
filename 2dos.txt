@@ -3,9 +3,6 @@
 // Methode String nicht nach 120 ZEICHEN sondern 10 WÖRTERN abzuschneiden
   Text.rb -> summary, summary meta ...- müsste es irgendeine Regex geben
 
-// beim dummen headify werden (logischerweise) leere <p> ausgegeben. 
-   Lösung dafür (Kombi headify + simple_format)
-
 // text.rb - Markierung aus String entfernen @[zahl.zahl name] (so oder ähnlich - nachsehen) 
     betrifft albums (albums auch? nee?) + feed (falls ma seite markiert wird)
 
@@ -15,7 +12,7 @@
 
 // album + albums seo überarbeiten
 
-// microdata event, events, album, albums überarbeiten
+// microdata album, albums, feed_start überarbeiten
 
 // index.haml - startgallery alt / title verbessern 
 
@@ -25,9 +22,12 @@
 
 // Open Graph Bild!
 
+
 // breadcrumb navi
 
+
 // Microdate Organization für _single_event ergänzen
+
 
 // -> Veranstater genauere Daten aus String holen für Microdata falls möglich
 

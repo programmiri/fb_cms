@@ -33,9 +33,21 @@ body {
 
 #mainheader {
 height: 300px;
-background-image:  url("/images/hundetraining-teamarbeit-header01.jpg");
 border-bottom: 1px solid #ccc;
 }
+
+.bg-header00 {
+background-image:  url("/images/header/teamarbeit-bgheader00.jpg"); 
+}
+
+.bg-header01 {
+background-image:  url("/images/header/teamarbeit-bgheader01.jpg"); 
+}
+
+.bg-header02 {
+background-image:  url("/images/header/teamarbeit-bgheader02.jpg"); 
+}
+
 /*bb wg. nav act */
 
 
@@ -58,7 +70,7 @@ border-bottom: 1px solid #ccc;
   display: table;   /* Allow the centering to work */
   margin: 0 auto;
   position: relative;
-  top: 177px;
+  top: 169px;
 }
 
 #mainnav a {

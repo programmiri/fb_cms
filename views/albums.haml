@@ -8,29 +8,29 @@
   Einen kleinen Einblick in unsere Arbeit könnt ihr über unsere Bilderalben gewinnen. Viel Spaß! 
 
   %ul 
-  - albums.each do |album|
-    %li
-      #albumcov.floatleft
-        %a.wrap{ :href => url(album.path), :title => album.name }
-          %div.acover{ :style => "background-image: url(#{album.cover})" }
-        .stack2
-          .stack1
-        
-      #div.albuminfo.gradient_transverti.floatright
-        %h2
-          %a.title{ :href => url(album.path), :title => album.description }
-            %b
-              &raquo;
-            = album.name
+    - albums.each do |album|
+      %li
+        .albumcov.floatleft
+          %a.wrap{ :href => url(album.path), :title => album.name }
+            .acover{ :style => "background-image: url(#{album.cover})" }
+          .stack2
+            .stack1
+          
+        .albuminfo.gradient_transverti.floatright
+          %h2
+            %a.title{ :href => url(album.path), :title => album.description }
+              %b
+                &raquo;
+              = album.name
 
-        %p.albumdates
-          Aktualisiert:
-          = I18n.l(album.updated_date, :format => "%d.%m.%y")
-          &bull;
-          Erstellt: 
-          = I18n.l(album.created_date, :format => "%d.%m.%y")
+          %p.albumdates
+            Aktualisiert:
+            = I18n.l(album.updated_date, :format => "%d.%m.%y")
+            &bull;
+            Erstellt: 
+            = I18n.l(album.created_date, :format => "%d.%m.%y")
 
-        -if album.description
-          %p
-            = nl2br(linkify_short truncate(album.description, 410))
-      .clear
+          -if album.description
+            %p
+              = nl2br(linkify_short truncate(album.description, 410))
+        .clear

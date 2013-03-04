@@ -4,14 +4,13 @@
     %meta{ "http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
     %link{ :type => "text/css", :rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Kreon" }/
     %meta{ :charset => "utf-8" }/
-    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
-    %meta{ :name => "viewport", :content => "width=device-width;" }/
+    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+    %meta{ :name => "viewport", :content => "width=device-width;" }
 
     %title= @meta_title
-    %meta{ :name => "description", :content => @meta_description }/
+    %meta{ :name => "description", :content => @meta_description }
 
-    %meta{:content => "#{settings.site_url}", :name => "author"}/
-    %meta{:content => "de", :name => "language"}/
+    %meta{:content => "#{settings.site_url}", :name => "author"}
 
     %meta{ :property => "og:title", :content => @meta_title }
     %meta{ :property => "og:description", :content => @meta_description }
@@ -39,7 +38,7 @@
   %body
     -# auch ein kommentar und ein test
     #container
-      %header#mainheader
+      %header#mainheader{ :class => "bg-header0#{rand(3)}"}
         %a#logo{:href => url("/"), :title => "Hundetraining Teamarbeit", :style => "width: 338px; height: 77px;"}
           %img{:src => url("/images/logo_hundetraining_teamarbeit.png"), :alt => "Hundetraining Teamarbeit"}
         %nav#mainnav
@@ -68,12 +67,12 @@
         #infos_bottom
           .lefti.floatleft
             %a{:href => "http://caneami.de/", :title => "Hundeschule CaneAmi"}
-              %img{:src => url("/images/caneami.jpg", :alt => "Hundeschule CaneAmi")}
+              %img{:src => url("/images/caneami.jpg"), :alt => "Hundeschule CaneAmi" }
             %p 
             Esther Follmann ⋅ Mühlbachstr. 7 ⋅ 67435 Neustadt/Weinstrasse
           .righti.floatright
             %a{:href => "http://cavecani.de/", :title => "Hundeschule CaveCani"}
-              %img{:src => url("/images/cavecani.png", :alt => "Hundeschule Hundetraining CaveCani")}
+              %img{:src => url("/images/cavecani.png"), :alt => "Hundeschule Hundetraining CaveCani" }
             %p 
             Mirjam Aulbach ⋅ Hinter der Altdörfer Kirche 30A ⋅ 64832 Babenhausen 
           .clear

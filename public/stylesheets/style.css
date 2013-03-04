@@ -242,14 +242,20 @@ body { font-family: Helvetica, "Helvetica Neue", Helvetica, Arial, sans-serif; t
 
 #container { width: 900px; height: 100%; min-height: 100%; height: auto !important; margin-top: 30px; margin-bottom: 20px; margin-left: auto; margin-right: auto; padding: 10px; text-align: left; background-color: #FCFCFC; box-shadow: 2px 2px 5px #888888; }
 
-#mainheader { height: 300px; background-image: url("/images/hundetraining-teamarbeit-header01.jpg"); border-bottom: 1px solid #ccc; }
+#mainheader { height: 300px; border-bottom: 1px solid #ccc; }
+
+.bg-header00 { background-image: url("/images/header/teamarbeit-bgheader00.jpg"); }
+
+.bg-header01 { background-image: url("/images/header/teamarbeit-bgheader01.jpg"); }
+
+.bg-header02 { background-image: url("/images/header/teamarbeit-bgheader02.jpg"); }
 
 /*bb wg. nav act */
 #logo { left: 25px; outline: medium none; position: relative; top: 105px; }
 
 /* logo id, einmalig */
 /* MainNav über id statt nav, falls noch mehr navs dazukommen */
-#mainnav { text-transform: uppercase; letter-spacing: 1px; text-align: center; display: table; /* Allow the centering to work */ margin: 0 auto; position: relative; top: 177px; }
+#mainnav { text-transform: uppercase; letter-spacing: 1px; text-align: center; display: table; /* Allow the centering to work */ margin: 0 auto; position: relative; top: 169px; }
 
 #mainnav a { color: #444444; display: inline-block; height: 30px; line-height: 30px; }
 
@@ -334,9 +340,9 @@ innerhalb von VIEWs */
 
 .fb_feed_date { font-size: 12px; font-weight: bold; color: white; line-height: 100%; font-style: normal; font-weight: normal; letter-spacing: -1px; height: 44px; width: 44px; margin-right: 8px; margin-left: -10px; background: #cbdc72; -webkit-border-radius: 300px 300px 300px 300px; -moz-border-radius: 300px 300px 300px 300px; border-radius: 300px 300px 300px 300px; border: 2px solid white; box-shadow: 1px 0px 2px #e5e5e5; }
 
-.feed_day_month { padding-top: 11px; padding-left: 5px; }
+.feed_day_month { padding-top: 11px; padding-left: 5px; display: block; }
 
-.feed_year { padding-left: 11px; }
+.feed_year { padding-left: 11px; display: block; }
 
 .fb_feed hr { border: 0; height: 1px; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: -15px; background: -moz-linear-gradient(left, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(153, 153, 153, 0.65)), color-stop(100%, rgba(0, 0, 0, 0))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* IE10+ */ background: linear-gradient(to right, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6999999', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */ }
 
@@ -371,19 +377,19 @@ img.postpicture { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-ra
 
 #albums li { margin-bottom: 80px; }
 
-#albumcov { position: absolute; }
+.albumcov { position: absolute; }
 
-#albumcov a.wrap { position: absolute; display: block; width: 500px; padding: 8px; background: white; border: 1px solid #e5e5e5; box-shadow: 2px 2px 3px #e5e5e5; -moz-box-shadow: 2px 2px 3px #e5e5e5; -webkit-box-shadow: 2px 2px 3px #e5e5e5; z-index: 3; }
+.albumcov a.wrap { position: absolute; display: block; width: 500px; padding: 8px; background: white; border: 1px solid #e5e5e5; box-shadow: 2px 2px 3px #e5e5e5; -moz-box-shadow: 2px 2px 3px #e5e5e5; -webkit-box-shadow: 2px 2px 3px #e5e5e5; z-index: 3; }
 
-#albumcov .stack1 { position: relative; width: 518px; height: 328px; background: white; border: 1px solid #e5e5e5; box-shadow: 2px 2px 3px #e5e5e5; -moz-box-shadow: 2px 2px 3px #e5e5e5; -webkit-box-shadow: 2px 2px 3px #e5e5e5; z-index: 2; transform: rotate(6deg); -ms-transform: rotate(6deg); /* IE 9 */ -webkit-transform: rotate(6deg); /* Safari and Chrome */ -o-transform: rotate(6deg); /* Opera */ -moz-transform: rotate(6deg); /* Firefox */ }
+.stack1 { position: relative; width: 518px; height: 328px; background: white; border: 1px solid #e5e5e5; box-shadow: 2px 2px 3px #e5e5e5; -moz-box-shadow: 2px 2px 3px #e5e5e5; -webkit-box-shadow: 2px 2px 3px #e5e5e5; z-index: 2; transform: rotate(6deg); -ms-transform: rotate(6deg); /* IE 9 */ -webkit-transform: rotate(6deg); /* Safari and Chrome */ -o-transform: rotate(6deg); /* Opera */ -moz-transform: rotate(6deg); /* Firefox */ }
 
-#albumcov .stack2 { position: relative; width: 518px; height: 328px; margin-left: -5px; margin-top: -5px; background: white; border: 1px solid #e5e5e5; box-shadow: 2px 2px 3px #e5e5e5; -moz-box-shadow: 2px 2px 3px #e5e5e5; -webkit-box-shadow: 2px 2px 3px #e5e5e5; z-index: 1; transform: rotate(-3deg); -ms-transform: rotate(-3deg); /* IE 9 */ -webkit-transform: rotate(-3deg); /* Safari and Chrome */ -o-transform: rotate(-3deg); /* Opera */ -moz-transform: rotate(-3deg); /* Firefox */ }
+.stack2 { position: relative; width: 518px; height: 328px; margin-left: -5px; margin-top: -5px; background: white; border: 1px solid #e5e5e5; box-shadow: 2px 2px 3px #e5e5e5; -moz-box-shadow: 2px 2px 3px #e5e5e5; -webkit-box-shadow: 2px 2px 3px #e5e5e5; z-index: 1; transform: rotate(-3deg); -ms-transform: rotate(-3deg); /* IE 9 */ -webkit-transform: rotate(-3deg); /* Safari and Chrome */ -o-transform: rotate(-3deg); /* Opera */ -moz-transform: rotate(-3deg); /* Firefox */ }
 
 #albums h2 { margin-top: 0px; margin-bottom: 0px; }
 
-#albumcov a.wrap:hover { margin-left: 1px; margin-top: 1px; border: 1px solid #e5e5e5; }
+.albumcov a.wrap:hover { border: 1px solid #cbdc72; }
 
-#albums .acover { width: 500px; height: 310px; background-position: center center; background-repeat: no-repeat; }
+.acover { width: 500px; height: 310px; background-position: center center; background-repeat: no-repeat; }
 
 .albuminfo { width: 280px; height: 310px; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; padding: 10px; font-size: 90%; }
 
