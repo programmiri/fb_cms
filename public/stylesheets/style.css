@@ -251,11 +251,11 @@ body { font-family: Helvetica, "Helvetica Neue", Helvetica, Arial, sans-serif; t
 .bg-header02 { background-image: url("/images/header/teamarbeit-bgheader02.jpg"); }
 
 /*bb wg. nav act */
-#logo { left: 25px; outline: medium none; position: relative; top: 105px; }
+#logo { left: 585px; outline: medium none; position: relative; top: 15px; }
 
 /* logo id, einmalig */
 /* MainNav über id statt nav, falls noch mehr navs dazukommen */
-#mainnav { text-transform: uppercase; letter-spacing: 1px; text-align: center; display: table; /* Allow the centering to work */ margin: 0 auto; position: relative; top: 169px; }
+#mainnav { text-transform: uppercase; letter-spacing: 1px; text-align: center; display: table; /* Allow the centering to work */ margin: 0 auto; position: relative; top: 186px; }
 
 #mainnav a { color: #444444; display: inline-block; height: 30px; line-height: 30px; }
 
