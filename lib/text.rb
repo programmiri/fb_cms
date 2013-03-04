@@ -5,8 +5,7 @@ module Text
     text = text.to_s.dup
     generic_URL = Regexp.new('(^|[\n ])([\w]+?://[\w]+[^ \"\n\r\t<]*)', Regexp::MULTILINE | Regexp::IGNORECASE)
     starts_with_www = Regexp.new('(^|[\n ])((www)\.[^ \"\t\n\r<]*)', Regexp::MULTILINE | Regexp::IGNORECASE)
-    #text.gsub!(generic_URL, '\1<a href="\2">\2</a>')
-    text.gsub!(generic_URL) { $1 + '<a href="\2">\2</a>' }
+    text.gsub!(generic_URL, '\1<a href="\2">\2</a>')
     text.gsub!(starts_with_www, '\1<a href="http://\2">\2</a>')
     text
   end
@@ -45,9 +44,9 @@ module Text
     text.gsub /http(s)?:\/\/[^\s]+\s|\shttp(s)?:\/\/[^\s]*/,""
   end
 
-
+  # für single_events, text muss VOR simple_formate in headify
   def headify(text)
-    text.gsub( /~~\s*([^~]+)\s*~~/, '<h3>\1</h3>')
+    text.gsub( /\n\n~~\s*([^~]+)\s*~~\s*\n\n/, '</p><h3>\1</h3><p>')
   end
 
   def simple_format(text, options = {})

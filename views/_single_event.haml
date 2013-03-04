@@ -45,7 +45,7 @@
           %meta{:itemprop => "image", :content => "http://graph.facebook.com/#{event.id}/picture?type=normal"}
           %img{ :src=> "http://graph.facebook.com/#{event.id}/picture?type=normal", :alt => "Seminar #{event.name}" }
       - if locals[:standalone]
-        = simple_format(headify(linkify(event.description)))     
+        = simple_format(headify(linkify(event.description)))
       - else
         = simple_format(linkify(event.summary))
 
