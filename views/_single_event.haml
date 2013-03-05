@@ -1,4 +1,4 @@
-/ Abfrage - Event oder Events? 
+/ Abfrage - Event oder Events? - für Klasse 
 - if locals[:standalone] 
   - styleclass = "single_event"
 - else
@@ -16,7 +16,9 @@
       //.cal_month= I18n.l(event.start, :format => "%B")
       .cal_year= I18n.l(event.start, :format => "%Y")
   %div{ :class => "#{styleclass} event_infos" }
-    - if locals[:standalone] 
+    - if locals[:standalone]
+      %h1{ :class => "h1 single_event", :itemprop => "name" } 
+        = event.name 
       %div{ :class => "event_circle floatright centered #{styleclass}" }
         %a{:href =>"http://facebook.com/events/#{event.id}", :title=>event.name}
           &raquo; Termin bei Facebook ansehen
