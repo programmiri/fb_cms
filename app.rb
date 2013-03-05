@@ -31,13 +31,17 @@ configure :production do
   set :cache_ttl, 30 * 60
 end
 
+not_found do
+  haml :"404"
+end
+
 # Ein Kommentar
 get '/' do
   posts = Facebook::Post.all
   haml :index, :locals => { :posts => posts }
 end
 
-get '/ueberuns' do
+get '/ueberuns/?' do
   page = Facebook::Page.load
   haml :about, :locals => { :page => page }
 end
@@ -54,7 +58,7 @@ get '/kontakt' do
   haml :contact
 end
 
-get '/bilder' do
+get '/bilder/?' do
   albums = Facebook::Album.all
   haml :albums, :locals => { :albums => albums }
 end
@@ -64,7 +68,7 @@ get '/bilder/:id/:name' do
   haml :album, :locals => { :album => album }
 end
 
-get '/termine' do
+get '/termine/?' do
   events = Facebook::Event.all
   haml :events, :locals => { :events => events }
 end

@@ -1,4 +1,12 @@
-2dos
+Accept that everything is a draft. It helps to get it done.
+
+In diesem Sinne... 
+
+
+************************************************************************************
+2dos nach Live ()
+************************************************************************************
+
 
 // Methode String nicht nach 120 ZEICHEN sondern 10 WÖRTERN abzuschneiden
   Text.rb -> summary, summary meta ...- müsste es irgendeine Regex geben
@@ -6,30 +14,20 @@
 // text.rb - Markierung aus String entfernen @[zahl.zahl name] (so oder ähnlich - nachsehen) 
     betrifft albums (albums auch? nee?) + feed (falls ma seite markiert wird)
 
-// css aufräumen -.- mega facepalm
-
-// irgendwann u.U. google + Seite anlegen und publisher infos mit rein. ma sehen
-
-// album + albums seo überarbeiten
+// index.haml - startgallery alt / title verbessern 
+// irgendwann u.U. google+ Seite anlegen und publisher infos mit rein. ma sehen
 
 // microdata album, albums, feed_start überarbeiten
-
-// index.haml - startgallery alt / title verbessern 
-
-
-
+// Microdate Organization für _single_event ergänzen
 //  Open Graph Angaben genauer
 
-// Open Graph Bild!
+// SEO Möglichkeiten prüfen (v.a. album + albums)
+// css aufräumen + DRY mega facepalm bislang -.-
+
+// arg vernachlässigte specs :(
 
 
-// breadcrumb navi
-
-
-// Microdate Organization für _single_event ergänzen
-
-
-// -> Veranstater genauere Daten aus String holen für Microdata falls möglich
+// -> Veranstater genauere Daten aus String holen für Microdata falls möglich (also, erst mal Möglichkeit überlegen)
 
 // Facebook - VENUE rausholen. 
    Venue gibt eine ID aus, kein Array (zumindest nicht beim Test mit Bachwiesenschule, laut doc ja schon, nee is klar) 
