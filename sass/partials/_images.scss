@@ -26,9 +26,7 @@
   padding: 8px;
   background: $white;
   border: 1px solid $light_grey;
-   box-shadow: 2px 2px 3px $light_grey;
-  -moz-box-shadow: 2px 2px 3px $light_grey;
-  -webkit-box-shadow: 2px 2px 3px $light_grey;
+  @include box-shadow(#999 2px 2px 3px);
   z-index: 3;
 }
 
@@ -38,9 +36,7 @@
   height: 328px;
   background: $white;
   border: 1px solid $light_grey;
-  box-shadow: 2px 2px 3px $light_grey;
-  -moz-box-shadow: 2px 2px 3px $light_grey;
-  -webkit-box-shadow: 2px 2px 3px $light_grey;
+  @include box-shadow(#999 2px 2px 3px);
   z-index: 2;
   transform: rotate(6deg);
   -ms-transform: rotate(6deg); /* IE 9 */
@@ -57,9 +53,7 @@
   margin-top: -5px;
   background: $white;
   border: 1px solid $light_grey;
-  box-shadow: 2px 2px 3px $light_grey;
-  -moz-box-shadow: 2px 2px 3px $light_grey;
-  -webkit-box-shadow: 2px 2px 3px $light_grey;
+  @include box-shadow(#999 2px 2px 3px);
   z-index: 1;
   transform: rotate(-3deg);
   -ms-transform: rotate(-3deg); /* IE 9 */
@@ -92,9 +86,7 @@ margin-bottom: 0px;
 .albuminfo {
   width: 280px;
   height: 310px;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  -moz-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
+  @include border-radius(5px);
   padding: 10px;
   font-size: 90%;
 }
@@ -130,9 +122,7 @@ margin-bottom: 0px;
   padding: 8px;
   background: $white;
   border: 1px solid $light_grey;
-  box-shadow: 2px 2px 3px $light_grey;
-  -moz-box-shadow: 2px 2px 3px $light_grey;
-  -webkit-box-shadow: 2px 2px 3px $light_grey
+  @include box-shadow(#999 2px 2px 3px);
 }
 
 #images a.img_wrap:hover {

@@ -240,7 +240,9 @@ html { overflow: -moz-scrollbars-vertical; background-image: url("/images/straws
 
 body { font-family: Helvetica, "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center; color: #444444; }
 
-#container { width: 900px; height: 100%; min-height: 100%; height: auto !important; margin-top: 30px; margin-bottom: 20px; margin-left: auto; margin-right: auto; padding: 10px; text-align: left; background-color: #FCFCFC; box-shadow: 2px 2px 5px #888888; }
+#container { width: 900px; height: 100%; min-height: 100%; height: auto !important; margin-top: 30px; margin-bottom: 20px; margin-left: auto; margin-right: auto; padding: 10px; text-align: left; background-color: #FCFCFC; -moz-box-shadow: #999999 2px 2px 5px; -webkit-box-shadow: #999999 2px 2px 5px; -o-box-shadow: #999999 2px 2px 5px; box-shadow: #999999 2px 2px 5px; }
+
+#breadcrumb { font-size: 80%; font-variant: small-caps; }
 
 #mainheader { height: 300px; border-bottom: 1px solid #ccc; }
 
@@ -249,6 +251,8 @@ body { font-family: Helvetica, "Helvetica Neue", Helvetica, Arial, sans-serif; t
 .bg-header01 { background-image: url("/images/header/teamarbeit-bgheader01.jpg"); }
 
 .bg-header02 { background-image: url("/images/header/teamarbeit-bgheader02.jpg"); }
+
+.bg-header03 { background-image: url("/images/header/teamarbeit-bgheader02.jpg"); }
 
 /*bb wg. nav act */
 #logo { left: 585px; outline: medium none; position: relative; top: 15px; }
@@ -259,13 +263,13 @@ body { font-family: Helvetica, "Helvetica Neue", Helvetica, Arial, sans-serif; t
 
 #mainnav a { color: #444444; display: inline-block; height: 30px; line-height: 30px; }
 
-#mainnav ul li.active a { font-weight: bold; height: 31px; }
+#mainnav .active a { font-weight: bold; height: 31px; }
 
-#mainnav ul li { float: left; margin-right: 10px; padding-left: 5px; width: 152px; -webkit-border-radius: 5px 5px 0px 0px; -moz-border-radius: 5px 5px 0px 0px; border-radius: 5px 5px 0px 0px; -webkit-box-shadow: 0px 0px 2px px #222222; -moz-box-shadow: 0px 0px 2px px #222222; box-shadow: 0px 0px 2px px #222222; background: #ffffff; background: rgba(255, 255, 255, 0.8); -webkit-transition: background 0.2s ease-in; -moz-transition: background 0.2s ease-in; -ms-transition: background 0.2s ease-in; -o-transition: background 0.2s ease-in; transition: background 0.2s ease-in; }
+#mainnav ul li { float: left; margin-right: 10px; padding-left: 5px; width: 152px; background: rgba(252, 252, 252, 0.8); -moz-border-radius: 5px 5px 0px 0px; -webkit-border-radius: 5px 5px 0px 0px; -o-border-radius: 5px 5px 0px 0px; -ms-border-radius: 5px 5px 0px 0px; -khtml-border-radius: 5px 5px 0px 0px; border-radius: 5px 5px 0px 0px; -webkit-transition: background 0.2s ease-in; -moz-transition: background 0.2s ease-in; -ms-transition: background 0.2s ease-in; -o-transition: background 0.2s ease-in; transition: background 0.2s ease-in; }
 
-#mainnav ul li:hover { background: white; }
+#mainnav ul li:hover { background: #fcfcfc; }
 
-#mainnav ul li.active { background: white; }
+#mainnav ul li.active { background: #fcfcfc; }
 
 #content { clear: both; padding-top: 20px; padding-bottom: 20px; padding-left: 30px; padding-right: 20px; }
 
@@ -293,17 +297,17 @@ a:hover { color: #6f9fa1; text-decoration: underline; }
 /* Cols für Layout */
 .leftcol { width: 540px; }
 
-.rightcol { width: 280px; margin-right: -30px; padding-right: 30px; padding-left: 20px; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; border-left: 1px solid #cbdc72; border-top: 1px solid #cbdc72; border-bottom: 1px solid #cbdc72; }
+.rightcol { width: 280px; margin-right: -30px; padding-right: 30px; padding-left: 20px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; border-left: 1px solid #cbdc72; border-top: 1px solid #cbdc72; border-bottom: 1px solid #cbdc72; }
 
 /* FB Like Box, kommt auf jeder Seite */
-.like_box { background: none repeat scroll 0 0 #e5e5e5; border-radius: 10px 10px 10px 10px; margin: 10px; padding: 10px 10px 0px 10px; }
+.like_box { background: none repeat scroll 0 0 #e5e5e5; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; margin: 10px; padding: 10px 10px 0px 10px; }
 
 /* Festlegung Layout für "normale" Bilder = 
 die, die groß eingefügt werden mit Untertitel 
 innerhalb von VIEWs */
 .view figure { width: 850px; text-align: center; }
 
-.view figure img { background: none repeat scroll 0 0 #fff; padding: 10px 10px 50px 10px; border: 1px solid #EEEEEE; box-shadow: 2px 2px 3px #e5e5e5; }
+.view figure img { background: none repeat scroll 0 0 #fff; padding: 10px 10px 50px 10px; border: 1px solid #EEEEEE; -moz-box-shadow: #999999 2px 2px 3px; -webkit-box-shadow: #999999 2px 2px 3px; -o-box-shadow: #999999 2px 2px 3px; box-shadow: #999999 2px 2px 3px; }
 
 .view figcaption { color: #333; font-size: 0.8em; font-variant: small-caps; padding-bottom: 17px; margin-top: -35px; margin-bottom: 50px; }
 
@@ -331,14 +335,14 @@ innerhalb von VIEWs */
 *
 */
 /* Logos auf Startseite */
-.logos { width: 320px; background: none repeat scroll 0 0 #fff; padding: 5px 5px 5px 5px; border: 1px solid #EEEEEE; box-shadow: 2px 2px 3px #e5e5e5; }
+.logos { width: 320px; background: none repeat scroll 0 0 #fff; padding: 5px 5px 5px 5px; border: 1px solid #EEEEEE; -moz-box-shadow: #999999 2px 2px 3px; -webkit-box-shadow: #999999 2px 2px 3px; -o-box-shadow: #999999 2px 2px 3px; box-shadow: #999999 2px 2px 3px; }
 
 .logos img { padding: 0; margin: 0; box-shadow: none; border: none; }
 
 /* PRÜFEN */
 .fb_feed p { font-size: 90%; line-height: 1.15; min-height: 60px; padding-top: 3px; margin-bottom: 5px; margin-top: 20px; }
 
-.fb_feed_date { font-size: 12px; font-weight: bold; color: white; line-height: 100%; font-style: normal; font-weight: normal; letter-spacing: -1px; height: 44px; width: 44px; margin-right: 8px; margin-left: -10px; background: #cbdc72; -webkit-border-radius: 300px 300px 300px 300px; -moz-border-radius: 300px 300px 300px 300px; border-radius: 300px 300px 300px 300px; border: 2px solid white; box-shadow: 1px 0px 2px #e5e5e5; }
+.fb_feed_date { font-size: 12px; font-weight: bold; color: white; line-height: 100%; font-style: normal; font-weight: normal; letter-spacing: -1px; height: 44px; width: 44px; margin-right: 8px; margin-left: -10px; background: #cbdc72; -moz-border-radius: 300px; -webkit-border-radius: 300px; -o-border-radius: 300px; -ms-border-radius: 300px; -khtml-border-radius: 300px; border-radius: 300px; border: 2px solid white; -moz-box-shadow: #999999 1px 0px 2px; -webkit-box-shadow: #999999 1px 0px 2px; -o-box-shadow: #999999 1px 0px 2px; box-shadow: #999999 1px 0px 2px; }
 
 .feed_day_month { padding-top: 11px; padding-left: 5px; display: block; }
 
@@ -346,14 +350,14 @@ innerhalb von VIEWs */
 
 .fb_feed hr { border: 0; height: 1px; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: -15px; background: -moz-linear-gradient(left, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(153, 153, 153, 0.65)), color-stop(100%, rgba(0, 0, 0, 0))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* IE10+ */ background: linear-gradient(to right, rgba(153, 153, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6999999', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */ }
 
-img.postpicture { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 1px; background-color: #cbdc72; max-width: 70px; height: auto; margin-right: -20px; }
+img.postpicture { -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; padding: 1px; background-color: #cbdc72; max-width: 70px; height: auto; margin-right: -20px; }
 
 /* 
 * Bildergallerie Starseite
 */
 #startgallery { margin-top: 70px; }
 
-#startgallery p { font-size: 80%; text-align: center; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding-bottom: 100px; margin-right: 25px; margin-bottom: -60px; }
+#startgallery p { font-size: 80%; text-align: center; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; padding-bottom: 100px; margin-right: 25px; margin-bottom: -60px; }
 
 #startgallery .minih2 { font-size: 180%; }
 
@@ -361,9 +365,9 @@ img.postpicture { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-ra
 
 #startgallery li { float: left; margin-right: 15px; margin-bottom: 15px; }
 
-#startgallery .cover { width: 250px; height: 167px; background-position: center center; background-repeat: no-repeat; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; filter: alpha(opacity=80); opacity: 0.8; }
+#startgallery .cover { width: 250px; height: 167px; background-position: center center; background-repeat: no-repeat; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 
-#startgallery .cover:hover { filter: alpha(opacity=100); opacity: 1; }
+#startgallery .cover:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 
 #startgallery a.img_wrap { display: block; }
 
@@ -379,11 +383,11 @@ img.postpicture { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-ra
 
 .albumcov { position: absolute; }
 
-.albumcov a.wrap { position: absolute; display: block; width: 500px; padding: 8px; background: white; border: 1px solid #e5e5e5; box-shadow: 2px 2px 3px #e5e5e5; -moz-box-shadow: 2px 2px 3px #e5e5e5; -webkit-box-shadow: 2px 2px 3px #e5e5e5; z-index: 3; }
+.albumcov a.wrap { position: absolute; display: block; width: 500px; padding: 8px; background: white; border: 1px solid #e5e5e5; -moz-box-shadow: #999999 2px 2px 3px; -webkit-box-shadow: #999999 2px 2px 3px; -o-box-shadow: #999999 2px 2px 3px; box-shadow: #999999 2px 2px 3px; z-index: 3; }
 
-.stack1 { position: relative; width: 518px; height: 328px; background: white; border: 1px solid #e5e5e5; box-shadow: 2px 2px 3px #e5e5e5; -moz-box-shadow: 2px 2px 3px #e5e5e5; -webkit-box-shadow: 2px 2px 3px #e5e5e5; z-index: 2; transform: rotate(6deg); -ms-transform: rotate(6deg); /* IE 9 */ -webkit-transform: rotate(6deg); /* Safari and Chrome */ -o-transform: rotate(6deg); /* Opera */ -moz-transform: rotate(6deg); /* Firefox */ }
+.stack1 { position: relative; width: 518px; height: 328px; background: white; border: 1px solid #e5e5e5; -moz-box-shadow: #999999 2px 2px 3px; -webkit-box-shadow: #999999 2px 2px 3px; -o-box-shadow: #999999 2px 2px 3px; box-shadow: #999999 2px 2px 3px; z-index: 2; transform: rotate(6deg); -ms-transform: rotate(6deg); /* IE 9 */ -webkit-transform: rotate(6deg); /* Safari and Chrome */ -o-transform: rotate(6deg); /* Opera */ -moz-transform: rotate(6deg); /* Firefox */ }
 
-.stack2 { position: relative; width: 518px; height: 328px; margin-left: -5px; margin-top: -5px; background: white; border: 1px solid #e5e5e5; box-shadow: 2px 2px 3px #e5e5e5; -moz-box-shadow: 2px 2px 3px #e5e5e5; -webkit-box-shadow: 2px 2px 3px #e5e5e5; z-index: 1; transform: rotate(-3deg); -ms-transform: rotate(-3deg); /* IE 9 */ -webkit-transform: rotate(-3deg); /* Safari and Chrome */ -o-transform: rotate(-3deg); /* Opera */ -moz-transform: rotate(-3deg); /* Firefox */ }
+.stack2 { position: relative; width: 518px; height: 328px; margin-left: -5px; margin-top: -5px; background: white; border: 1px solid #e5e5e5; -moz-box-shadow: #999999 2px 2px 3px; -webkit-box-shadow: #999999 2px 2px 3px; -o-box-shadow: #999999 2px 2px 3px; box-shadow: #999999 2px 2px 3px; z-index: 1; transform: rotate(-3deg); -ms-transform: rotate(-3deg); /* IE 9 */ -webkit-transform: rotate(-3deg); /* Safari and Chrome */ -o-transform: rotate(-3deg); /* Opera */ -moz-transform: rotate(-3deg); /* Firefox */ }
 
 #albums h2 { margin-top: 0px; margin-bottom: 0px; }
 
@@ -391,7 +395,7 @@ img.postpicture { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-ra
 
 .acover { width: 500px; height: 310px; background-position: center center; background-repeat: no-repeat; }
 
-.albuminfo { width: 280px; height: 310px; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; padding: 10px; font-size: 90%; }
+.albuminfo { width: 280px; height: 310px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; padding: 10px; font-size: 90%; }
 
 .albumdates { font-size: 80%; font-variant: small-caps; margin-top: 0px; margin-bottom: 5px; }
 
@@ -400,7 +404,7 @@ img.postpicture { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-ra
 
 #images li { width: 350px; height: 213px; float: left; margin: 30px; }
 
-#images a.img_wrap { display: block; width: 320px; padding: 8px; background: white; border: 1px solid #e5e5e5; box-shadow: 2px 2px 3px #e5e5e5; -moz-box-shadow: 2px 2px 3px #e5e5e5; -webkit-box-shadow: 2px 2px 3px #e5e5e5; }
+#images a.img_wrap { display: block; width: 320px; padding: 8px; background: white; border: 1px solid #e5e5e5; -moz-box-shadow: #999999 2px 2px 3px; -webkit-box-shadow: #999999 2px 2px 3px; -o-box-shadow: #999999 2px 2px 3px; box-shadow: #999999 2px 2px 3px; }
 
 #images a.img_wrap:hover { border: 1px solid #cbdc72; }
 
@@ -418,7 +422,7 @@ img.postpicture { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-ra
 /* Adressiert ausschiesslich SUM_event (events) */
 li.sum_event { margin-top: 30px; padding-top: 25px; padding-bottom: 0; padding-left: 20px; padding-right: 20px; background-color: #e5e5e5; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; overflow: hidden; *zoom: 1; }
 
-.event_circle { /* Adressiert beide  */ height: 120px; width: 120px; margin-right: 30px; background-color: #cbdc72; border-radius: 300px 300px 300px 300px; box-shadow: 1px 0 2px #999; border: 2px solid white; }
+.event_circle { /* Adressiert beide  */ height: 120px; width: 120px; margin-right: 30px; background-color: #cbdc72; -moz-border-radius: 300px; -webkit-border-radius: 300px; -o-border-radius: 300px; -ms-border-radius: 300px; -khtml-border-radius: 300px; border-radius: 300px; -moz-box-shadow: #999999 1px 0 2px; -webkit-box-shadow: #999999 1px 0 2px; -o-box-shadow: #999999 1px 0 2px; box-shadow: #999999 1px 0 2px; border: 2px solid white; }
 
 .cal_day { /* Adressiert nur sum_event, Klasse gibts nur da */ text-transform: uppercase; text-align: center; font-size: 20px; font-weight: bold; color: white; line-height: 1; padding-top: 30px; }
 
@@ -454,7 +458,7 @@ li.sum_event { margin-top: 30px; padding-top: 25px; padding-bottom: 0; padding-l
 
 .eventdesc.single_event { /*Adressiert nur single_event*/ margin-top: 60px; }
 
-.eventpic { /* Adressiert beide */ background-color: white; padding: 4px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; border: 1px solid #e5e5e5; -moz-box-shadow: #999999 1px 1px 3px; -webkit-box-shadow: #999999 1px 1px 3px; -o-box-shadow: #999999 1px 1px 3px; box-shadow: #999999 1px 1px 3px; margin-top: 0; }
+.eventpic { /* Adressiert beide */ background-color: white; padding: 4px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; border: 1px solid #e5e5e5; margin-top: 0; }
 
 .sum_event .eventpic { /* adressiert nur sum_event */ margin-right: 15px; }
 

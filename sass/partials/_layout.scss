@@ -27,8 +27,13 @@ body {
   margin-right: auto;
   padding: 10px;
   text-align: left;
-  background-color: #FCFCFC;;
-  box-shadow: 2px 2px 5px #888888;
+  background-color: #FCFCFC;
+  @include box-shadow(#999 2px 2px 5px);
+}
+
+#breadcrumb {
+  font-size: 80%;
+  font-variant: small-caps;
 }
 
 #mainheader {
@@ -45,6 +50,10 @@ background-image:  url("/images/header/teamarbeit-bgheader01.jpg");
 }
 
 .bg-header02 {
+background-image:  url("/images/header/teamarbeit-bgheader02.jpg"); 
+}
+
+.bg-header03 {
 background-image:  url("/images/header/teamarbeit-bgheader02.jpg"); 
 }
 
@@ -80,7 +89,7 @@ background-image:  url("/images/header/teamarbeit-bgheader02.jpg");
   line-height: 30px;
 }
 
-#mainnav ul li.active a {
+#mainnav .active a {
   font-weight: bold;
   height: 31px;  
 }
@@ -91,14 +100,8 @@ background-image:  url("/images/header/teamarbeit-bgheader02.jpg");
   margin-right: 10px;
   padding-left: 5px;
   width: 152px;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -moz-border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px; 
-  -webkit-box-shadow: 0px 0px 2px px #222222;
-  -moz-box-shadow: 0px 0px 2px px #222222;
-  box-shadow: 0px 0px 2px px #222222;
-  background: #ffffff;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(252, 252, 252, 0.8);
+  @include border-radius(5px 5px 0px 0px);
   -webkit-transition: background 0.2s ease-in;
   -moz-transition: background 0.2s ease-in;
   -ms-transition: background 0.2s ease-in;
@@ -106,12 +109,13 @@ background-image:  url("/images/header/teamarbeit-bgheader02.jpg");
   transition: background 0.2s ease-in;
 }
 
+
 #mainnav ul li:hover {
-  background: rgba(255, 255, 255, 1);
+  background: rgba(252, 252, 252, 1);
 }
 
 #mainnav ul li.active {
-  background: rgba(255, 255, 255, 1);
+  background: rgba(252, 252, 252, 1);
 }
 
 #content {

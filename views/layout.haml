@@ -56,6 +56,39 @@
 
 
       %section#content{ :role => "main" }
+        #breadcrumb
+          - #Elegant ist anders - aber vorerst eine halbwegs :/ funktionierende Lösung
+          - if request.path_info=="/"
+            Start
+          - else
+            %a{ :href => "/", :title => "Zur Startseite"}
+              Start
+            &raquo; 
+            - if request.path_info[/\A\/ueberuns*[^a-zA-Z]*\z/]
+              Über uns
+            - if request.path_info[/\A\/ueberuns\/\S/]
+              %a{ :href => "/ueberuns", :title => "Zur Startseite"}
+                Über uns
+              &raquo;  
+              - if request.path_info[/ueberuns\/e\S/]
+                Esther Follmann
+              - else
+                Mirjam Aulbach
+            - if request.path_info[/\A\/termine*[^a-zA-Z]*\z/]
+              Termine
+            - if request.path_info[/\A\/termine\/\S/]
+              %a{ :href => "/termine", :title => "Termine"}
+                Termine
+              &raquo; Detailansicht
+            - if request.path_info[/\A\/bilder*[^a-zA-Z]*\z/]
+              Bilder
+            - if request.path_info[/\A\/bilder\/\S/]
+              %a{ :href => "/bilder", :title => "Bilder"}
+                Bilder
+              &raquo; Album
+            - if request.path_info[/\A\/kontakt/]
+              Kontakt
+
         = yield
         .clear
 
