@@ -1,5 +1,8 @@
 my fork :)
 
+n00b -> be nice :3
+
+
 # What is this?
 
 This is just a simple example app that shows how to use the facebook graph api to retrieve content from a facebook page and its connected resources.
