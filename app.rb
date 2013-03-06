@@ -18,7 +18,7 @@ set :public,   File.dirname(__FILE__) + '/public'
 set :views,    File.dirname(__FILE__) + '/views'
 set :facebook, Hash[*ENV["DATA_FACEBOOK"].split(",")]
 set :google,   Hash[*ENV["DATA_GOOGLE"].split(",")]
-set :site_url, "http://hundetraining-teamarbeit.de"
+set :site_url, "http://www.hundetraining-teamarbeit.de"
 
 configure :development do
   set :redis, Redis.new
