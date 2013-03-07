@@ -12,8 +12,7 @@
         = I18n.l(event.start, :format => "%d.")
         - if event.end_time
           =I18n.l(event.end_time, :format => "-&nbsp;%d.")
-      .cal_month September
-      //.cal_month= I18n.l(event.start, :format => "%B")
+      .cal_month= I18n.l(event.start, :format => "%B")
       .cal_year= I18n.l(event.start, :format => "%Y")
   %div{ :class => "#{styleclass} event_infos" }
     - if locals[:standalone]
