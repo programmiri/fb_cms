@@ -379,6 +379,8 @@ img.postpicture { -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border
 /* Album */
 #albums { list-style: none; margin: 0; padding: 0; }
 
+#albums ul { margin-top: 80px; }
+
 #albums li { margin-bottom: 80px; }
 
 .albumcov { position: absolute; }
