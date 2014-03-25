@@ -1,7 +1,9 @@
 class Facebook::Photo < Facebook::GraphObject
 
   def thumb
-     data["images"][5]["source"]
+    img = data["images"][2] 
+    img ||= data["images"][0]
+    img["source"]
   end
 
   def url
