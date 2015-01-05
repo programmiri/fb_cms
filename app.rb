@@ -50,8 +50,8 @@ get '/ueberuns/estherfollmann' do
   haml :estherfollmann
 end
 
-get '/ueberuns/mirjamaulbach' do
-  haml :mirjamaulbach
+get '/ueberuns/mirjambaeuerlein' do
+  haml :mirjambaeuerlein
 end
 
 get '/kontakt' do
