@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class Facebook::Page < Facebook::GraphObject
 
   def mission

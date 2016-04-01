@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class Facebook::Post < Facebook::GraphObject
 
   def message

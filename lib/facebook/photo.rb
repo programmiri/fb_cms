@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class Facebook::Photo < Facebook::GraphObject
 
   def thumb

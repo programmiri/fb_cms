@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 #Hilfsfunktionen für JS, CSS etc.
 module Assets
   module Helpers

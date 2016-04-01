@@ -1,3 +1,4 @@
+# encoding: UTF-8
 
 class Facebook::Album < Facebook::GraphObject
 

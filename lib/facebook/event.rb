@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class Facebook::Event < Facebook::GraphObject
 
   attr_accessor :attending

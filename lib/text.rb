@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 #Hilfsmethoden rund um Text
 module Text
 
