@@ -1,17 +1,16 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem "koala", "~> 1.2.0beta"
 
 gem "redis"
 gem "json"
 
-gem "sinatra"
+gem "sinatra", "1.2.6"
 gem "thin"
 
 gem "compass"
 gem "haml"
 
-gem "therubyracer-heroku", "~> 0.8.1.pre3", :group => :production
 gem "uglifier"
 
 gem "i18n"

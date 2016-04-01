@@ -28,7 +28,7 @@ class Facebook::Post < Facebook::GraphObject
 
     def all
       posts = cache("collection") do
-        graph.get_connections(settings.facebook["page_id"], "posts", :limit => 25)
+        graph.get_connections(Settings.facebook["page_id"], "posts", :limit => 25)
       end.collect{|post| new post }
 
       # only take statuses and links

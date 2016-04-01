@@ -49,7 +49,7 @@ class Facebook::Event < Facebook::GraphObject
     end
 
     def all
-      events = cache("collection") { graph.get_connections(settings.facebook["page_id"], "events") }
+      events = cache("collection") { graph.get_connections(Settings.facebook["page_id"], "events") }
 
       detailled_events = cache("detailled_events") do
         graph.batch do |batch_api|

@@ -49,7 +49,7 @@ class Facebook::Album < Facebook::GraphObject
 
     def all
       albums = cache("collection") do
-        graph.get_connections(settings.facebook["page_id"], "albums")
+        graph.get_connections(Settings.facebook["page_id"], "albums")
       end.collect{ |album| new album }
 
       # sort out profile images

@@ -25,7 +25,8 @@ module Facebook
     end
 
     def upated_at
-      Time.zone.parse data["updated_time"]
+      # Time.zone.parse data["updated_time"]
+      DateTime.parse data["updated_time"]
     end
 
     def path
@@ -43,13 +44,13 @@ module Facebook
       end
 
       def cache_write(key, data)
-        settings.redis.set(key, data.to_json)
-        settings.redis.expire(key, settings.cache_ttl)
+        Settings.redis.set(key, data.to_json)
+        Settings.redis.expire(key, Settings.cache_ttl)
         data
       end
 
       def cache_read(key)
-        cached = settings.redis.get(key)
+        cached = Settings.redis.get(key)
         cached ? JSON.parse(cached) : nil
       end
 
@@ -68,7 +69,7 @@ module Facebook
 
       def graph
         return @@graph if defined?(@@graph)
-        oauth = Koala::Facebook::OAuth.new(settings.facebook["app_id"], settings.facebook["app_secret"])
+        oauth = Koala::Facebook::OAuth.new(Settings.facebook["app_id"], Settings.facebook["app_secret"])
         access_token = oauth.get_app_access_token
         @@graph = Koala::Facebook::API.new(access_token)
       end

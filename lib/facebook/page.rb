@@ -10,7 +10,7 @@ class Facebook::Page < Facebook::GraphObject
 
   class << self
 
-    def load(id = settings.facebook["page_id"])
+    def load(id = Settings.facebook["page_id"])
       page_data = cache(id) do
         graph.get_object(id)
       end

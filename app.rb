@@ -2,33 +2,67 @@ require 'bundler'
 Bundler.require
 require 'active_support/time'
 require 'active_support/inflector'
-
 require './lib/assets'
 require './lib/facebook'
 require './lib/text'
 
-Time.zone = "Berlin"
+Time.zone = "Europe/Berlin"
 I18n.load_path << File.join(File.dirname(__FILE__), 'config', 'locales.yml')
 I18n.locale = :de
 
 Sinatra.register Assets
 Sinatra.register Text
 
-set :public,   File.dirname(__FILE__) + '/public'
+module Settings
+  def self.setup_development!
+    setup_common!
+    @redis = Redis.new
+    @cache_ttl = 0
+  end
+
+  def self.setup_production!
+    setup_common!
+    uri = URI.parse(ENV["REDISTOGO_URL"])
+    @redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+    @cache_ttl = 30 * 60
+  end
+
+  def self.setup_common!
+    @facebook = Hash[*ENV["DATA_FACEBOOK"].split(",")]
+    @google   = Hash[*ENV["DATA_GOOGLE"].split(",")]
+    @site_url = "http://www.hundetraining-teamarbeit.de"
+  end
+
+  def self.redis
+    @redis
+  end
+
+  def self.facebook
+    @facebook
+  end
+
+  def self.google
+    @google
+  end
+
+  def self.site_url
+    @site_url
+  end
+
+  def self.cache_ttl
+    @cache_ttl
+  end  
+end
+
+set :public_folder, File.dirname(__FILE__) + '/public'
 set :views,    File.dirname(__FILE__) + '/views'
-set :facebook, Hash[*ENV["DATA_FACEBOOK"].split(",")]
-set :google,   Hash[*ENV["DATA_GOOGLE"].split(",")]
-set :site_url, "http://www.hundetraining-teamarbeit.de"
 
 configure :development do
-  set :redis, Redis.new
-  set :cache_ttl, 0
+  Settings.setup_development!
 end
 
 configure :production do
-  uri = URI.parse(ENV["REDISTOGO_URL"])
-  set :redis, Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
-  set :cache_ttl, 30 * 60
+  Settings.setup_production!
 end
 
 not_found do

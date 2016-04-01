@@ -10,7 +10,7 @@
     %title= @meta_title
     %meta{ :name => "description", :content => @meta_description }
 
-    %meta{:content => "#{settings.site_url}", :name => "author"}
+    %meta{:content => "#{Settings.site_url}", :name => "author"}
 
     %meta{ :property => "og:title", :content => @meta_title }
     %meta{ :property => "og:description", :content => @meta_description }
@@ -18,17 +18,17 @@
     %meta{ :property => "og:url", :content => "#{request.url}"}  
     %meta{ :property => "og:locale", :content => "DE_de" }
     %meta{ :property => "og:site_name", :content => "Hundetraining Teamarbeit" }
-    %meta{ :property => "og:image", :content => "#{settings.site_url}/images/hundetraining-teamarbeit-og.jpg" }
+    %meta{ :property => "og:image", :content => "#{Settings.site_url}/images/hundetraining-teamarbeit-og.jpg" }
 
-    %meta{ :property => "fb:admins", :content => settings.facebook['admin_id'] }
+    %meta{ :property => "fb:admins", :content => Settings.facebook['admin_id'] }
 
     %link{ :rel => 'stylesheet', :type => 'text/css', :href => url('stylesheets/style.css') }
 
     %script{ :type => 'text/javascript', :src =>  url('javascripts/libs/modernizr-2.0.6.min.js') }
     :javascript
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '#{settings.google['analytics']}']);
-      _gaq.push(['_setDomainName', '#{settings.site_url}']);
+      _gaq.push(['_setAccount', '#{Settings.google['analytics']}']);
+      _gaq.push(['_setDomainName', '#{Settings.site_url}']);
       _gaq.push(['_trackPageview']);
 
       (function() {
@@ -96,7 +96,7 @@
       %footer#mainfooter
         .like_box
           :plain
-            <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F#{URI.escape(settings.facebook['fb_page_path'])}&amp;width=780&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23e5e5e5&amp;stream=false&amp;header=false&amp;height=258" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:780px; height:258px;" allowTransparency="true"></iframe>
+            <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F#{URI.escape(Settings.facebook['fb_page_path'])}&amp;width=780&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23e5e5e5&amp;stream=false&amp;header=false&amp;height=258" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:780px; height:258px;" allowTransparency="true"></iframe>
 
         #infos_bottom
           .lefti.floatleft
